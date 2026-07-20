@@ -1,0 +1,396 @@
+.school-youth {
+  background: var(--cream-light);
+}
+
+/* Hero */
+.youth-hero {
+  padding: 1.5rem 0 3rem;
+  overflow: visible;
+}
+
+.youth-hero .container {
+  overflow: visible;
+}
+
+.youth-hero__layout {
+  overflow: visible;
+}
+
+.youth-hero__image-wrap {
+  position: relative;
+  width: min(720px, 100%);
+  overflow: visible;
+  --youth-overlay-room: min(240px, 34vw);
+  --youth-overlay-overlap: 24px;
+  padding-right: var(--youth-overlay-room);
+}
+
+.youth-hero__image {
+  width: 100%;
+  height: clamp(240px, 52vw, 380px);
+  object-fit: cover;
+  border-radius: 1.5rem 0 1.5rem 0;
+  display: block;
+}
+
+.youth-hero__overlay-box {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(calc(-1 * var(--youth-overlay-room) - var(--youth-overlay-overlap)), -50%);
+  width: min(420px, 40vw);
+  background: var(--mm-blue);
+  padding: 1.75rem 2rem;
+  border-radius: 0 51px 0 51px;
+  z-index: 2;
+}
+
+.youth-hero__headline {
+  color: var(--mm-white);
+  font-family: var(--font-apparat);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.youth-hero__subtext {
+  color: var(--mm-white);
+  font-family: var(--font-apparat);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+.youth-hero__starburst {
+  position: absolute;
+  bottom: 2rem;
+  left: 38%;
+  z-index: 3;
+}
+
+.youth-hero__starburst .mm-star-animate {
+  animation-duration: 5s;
+  animation-delay: -2s;
+}
+
+/* Intro */
+.youth-intro {
+  background: var(--white);
+  padding: 4rem 0;
+}
+
+.youth-intro__layout {
+  display: grid;
+  grid-template-columns: 1fr min(320px, 38%);
+  gap: 3rem;
+  align-items: center;
+}
+
+.youth-intro__title {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  color: var(--mm-blue);
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+.youth-intro__title em {
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mm-coral-alt);
+}
+
+.youth-intro__body {
+  font-family: var(--font-apparat);
+  font-size: 0.9rem;
+  line-height: 1.72;
+  color: var(--text-body, #3a3a3a);
+}
+
+.youth-intro__body p + p {
+  margin-top: 0.85rem;
+}
+
+.youth-intro__body strong {
+  color: var(--mm-blue);
+  font-weight: 700;
+}
+
+.youth-intro__media {
+  position: relative;
+}
+
+.youth-intro__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1.5rem 0 1.5rem 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.youth-intro__accent {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  width: 55%;
+  height: 55%;
+  background: var(--peach);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* What We Cover */
+.youth-cover {
+  background: var(--cream-light);
+  padding: 4rem 0;
+}
+
+.youth-cover__intro {
+  max-width: 720px;
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: var(--text-body, #3a3a3a);
+  margin-bottom: 2.5rem;
+}
+
+.youth-cover__intro strong {
+  color: var(--mm-blue);
+  font-weight: 700;
+}
+
+.youth-cover__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.youth-cover__card {
+  background: var(--white);
+  padding: 1.75rem 1.5rem;
+  border-radius: 0 1.25rem 0 1.25rem;
+  border-top: 3px solid var(--mm-coral);
+}
+
+.youth-cover__card-title {
+  font-family: var(--font-apparat);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--mm-blue);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.youth-cover__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.youth-cover__list-item {
+  position: relative;
+  padding-left: 1.2rem;
+  font-family: var(--font-apparat);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.youth-cover__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mm-coral);
+}
+
+/* Formats */
+.youth-formats {
+  background: var(--white);
+  padding: 4rem 0;
+}
+
+.youth-formats__intro {
+  max-width: 680px;
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-body, #3a3a3a);
+  margin-bottom: 2rem;
+}
+
+.youth-formats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.youth-formats__card {
+  background: var(--mm-blue);
+  color: var(--white);
+  padding: 2rem 1.75rem;
+  border-radius: 0 1.5rem 0 1.5rem;
+}
+
+.youth-formats__card-title {
+  font-family: var(--font-apparat);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.youth-formats__card-desc {
+  font-family: var(--font-apparat);
+  font-size: 0.84rem;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+/* Why It Matters */
+.youth-why {
+  background: var(--cream-light);
+  padding: 4rem 0;
+}
+
+.youth-why__content {
+  max-width: 720px;
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: var(--text-body, #3a3a3a);
+}
+
+.youth-why__content p + p {
+  margin-top: 0.85rem;
+}
+
+.youth-why__highlight {
+  font-weight: 700;
+  color: var(--mm-blue);
+  font-size: 1rem;
+}
+
+/* CTA */
+.youth-cta {
+  background: var(--mm-coral);
+  padding: 3.5rem 0;
+  color: var(--white);
+}
+
+.youth-cta__inner {
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.youth-cta__title {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.youth-cta__text {
+  font-family: var(--font-apparat);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.youth-cta__btn {
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+
+.youth-cta__btn .CharOverride-25 {
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .youth-hero {
+    padding: 1.25rem 0 2rem;
+  }
+
+  .youth-hero__image-wrap {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .youth-hero__overlay-box {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: auto;
+    margin-top: -1.25rem;
+    max-width: 100%;
+  }
+
+  .youth-intro {
+    padding: 3rem 0;
+  }
+
+  .youth-intro__layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .youth-intro__media {
+    max-width: 360px;
+  }
+
+  .youth-cover__grid,
+  .youth-formats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .youth-cover,
+  .youth-formats,
+  .youth-why {
+    padding: 3rem 0;
+  }
+
+  .youth-cta {
+    padding: 2.75rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .youth-hero__overlay-box {
+    padding: 1.35rem 1.25rem;
+    border-radius: 0 36px 0 36px;
+  }
+
+  .youth-hero__headline {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+  }
+
+  .youth-hero__subtext {
+    font-size: 0.72rem;
+  }
+
+  .youth-hero__starburst {
+    left: auto;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .youth-cover__card,
+  .youth-formats__card {
+    padding: 1.35rem 1.25rem;
+  }
+}

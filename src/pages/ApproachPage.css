@@ -1,0 +1,434 @@
+.approach-page {
+  background: var(--cream-light);
+}
+
+/* Hero — split editorial layout (distinct from overlay-card heroes) */
+.approach-hero {
+  padding: 2.5rem 0 3.5rem;
+  background: var(--white);
+  border-bottom: 1px solid rgba(30, 75, 189, 0.08);
+}
+
+.approach-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr min(42%, 480px);
+  gap: 3rem;
+  align-items: center;
+}
+
+.approach-hero__eyebrow {
+  font-family: var(--font-apparat);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mm-coral);
+  margin-bottom: 0.75rem;
+}
+
+.approach-hero__title {
+  font-family: var(--font-apparat);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--mm-blue);
+  margin-bottom: 1.25rem;
+}
+
+.approach-hero__title em {
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mm-coral-alt);
+}
+
+.approach-hero__lead {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  color: var(--text-body, #3a3a3a);
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+}
+
+.approach-hero__text {
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.approach-hero__text strong {
+  color: var(--mm-blue);
+  font-weight: 700;
+}
+
+.approach-hero__media {
+  position: relative;
+}
+
+.approach-hero__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2rem 0 2rem 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.approach-hero__shape {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  width: 45%;
+  height: 45%;
+  background: var(--mm-blue);
+  border-radius: 0 2rem 0 2rem;
+  z-index: 0;
+  opacity: 0.12;
+}
+
+.approach-pano {
+  width: 100%;
+  max-height: 280px;
+  overflow: hidden;
+}
+
+.approach-pano__image {
+  width: 100%;
+  height: clamp(160px, 28vw, 280px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Philosophy */
+.approach-philosophy {
+  padding: 4rem 0;
+  background: var(--cream-light);
+}
+
+.approach-philosophy__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem 3rem;
+  align-items: start;
+}
+
+.approach-philosophy__quote {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.55;
+  color: var(--mm-blue);
+  margin: 0;
+  padding: 2rem 0 2rem 1.75rem;
+  border-left: 4px solid var(--mm-coral);
+}
+
+.approach-philosophy__body {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: var(--text-body, #3a3a3a);
+}
+
+.approach-philosophy__media {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.approach-philosophy__image {
+  width: 100%;
+  height: clamp(200px, 28vw, 280px);
+  object-fit: cover;
+  border-radius: 0 1.5rem 0 1.5rem;
+  display: block;
+}
+
+/* Methodology */
+.approach-methodology {
+  padding: 4rem 0;
+  background: var(--mm-blue);
+  color: var(--white);
+}
+
+.approach-section-label {
+  font-family: var(--font-apparat);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+}
+
+.approach-methodology__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.approach-methodology__item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem 1.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.approach-methodology__item:nth-child(odd) {
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.approach-methodology__item:nth-child(even) {
+  padding-left: 2rem;
+}
+
+.approach-methodology__number {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--peach);
+  flex-shrink: 0;
+  min-width: 2.5rem;
+}
+
+.approach-methodology__title {
+  font-family: var(--font-apparat);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.approach-methodology__desc {
+  font-family: var(--font-apparat);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* What this is not */
+.approach-not {
+  padding: 3.5rem 0;
+  background: var(--white);
+}
+
+.approach-not__title {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  color: var(--mm-coral);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.approach-not__list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 820px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+}
+
+.approach-not__item {
+  font-family: var(--font-apparat);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--mm-blue);
+  background: var(--cream-light);
+  padding: 0.65rem 1.15rem;
+  border-radius: 2rem;
+  border: 1.5px solid rgba(30, 75, 189, 0.12);
+}
+
+.approach-not__item:last-child {
+  flex-basis: 100%;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.5rem 0 0;
+}
+
+/* Engagement journey */
+.approach-journey {
+  padding: 4rem 0;
+  background: var(--cream-light);
+}
+
+.approach-journey__header {
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+}
+
+.approach-journey__title {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  color: var(--mm-blue);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.approach-journey__intro {
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-body, #3a3a3a);
+}
+
+.approach-journey__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.approach-journey__step {
+  background: var(--white);
+  padding: 1.5rem 1.25rem;
+  border-radius: 0 1.25rem 0 1.25rem;
+  border-bottom: 3px solid var(--mm-coral);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.approach-journey__step-num {
+  font-family: var(--font-apparat);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--peach);
+  line-height: 1;
+}
+
+.approach-journey__step-title {
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--mm-blue);
+  line-height: 1.35;
+}
+
+.approach-journey__step-desc {
+  font-family: var(--font-apparat);
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.approach-journey__cta {
+  text-align: center;
+}
+
+/* Footer note */
+.approach-note {
+  padding: 2rem 0 3rem;
+  background: var(--mm-coral);
+  color: var(--white);
+}
+
+.approach-note__text {
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.approach-note__text strong {
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .approach-hero {
+    padding: 2rem 0 2.5rem;
+  }
+
+  .approach-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .approach-hero__media {
+    max-width: 420px;
+  }
+
+  .approach-philosophy {
+    padding: 3rem 0;
+  }
+
+  .approach-philosophy__layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .approach-philosophy__quote {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 0 0 0 1.25rem;
+  }
+
+  .approach-philosophy__body,
+  .approach-philosophy__media {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .approach-methodology__list {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-methodology__item:nth-child(odd) {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .approach-methodology__item:nth-child(even) {
+    padding-left: 0;
+  }
+
+  .approach-journey__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-methodology,
+  .approach-journey {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-hero__title {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+  }
+
+  .approach-not__item {
+    font-size: 0.82rem;
+  }
+
+  .approach-journey__step {
+    padding: 1.25rem 1rem;
+  }
+}

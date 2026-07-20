@@ -1,0 +1,49 @@
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cream-light);
+}
+
+.not-found__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4rem 0 5rem;
+  max-width: 40rem;
+}
+
+.not-found__eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-apparat);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mm-coral);
+}
+
+.not-found__title {
+  margin: 0 0 1rem;
+  font-family: var(--font-apparat);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--mm-blue);
+}
+
+.not-found__text {
+  margin: 0 0 2rem;
+  font-family: var(--font-apparat);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.not-found__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}

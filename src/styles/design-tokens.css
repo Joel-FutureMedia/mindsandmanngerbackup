@@ -1,0 +1,190 @@
+/**
+ * Design tokens extracted from idGeneratedStyles.css (InDesign export).
+ * Source: design_5_for_joel web resources
+ */
+
+:root {
+  /* Backgrounds (_idGenObjectStyleOverride) */
+  --mm-cream: #efebe8;
+  --mm-white: #ffffff;
+  --mm-blue: #2050d0;
+  --mm-blue-accent: #214fcf;
+  --mm-blue-light: #82a6f2;
+  --mm-blue-light-alt: #84a5f2;
+  --mm-coral: #f2694a;
+  --mm-coral-alt: #f36849;
+  --mm-coral-soft: #f57d62;
+  --mm-gold: #ecbe54;
+  --mm-peach: #fcded6;
+  --mm-black: #000000;
+
+  /* Semantic aliases used across components */
+  --blue: var(--mm-blue);
+  --blue-dark: var(--mm-blue-accent);
+  --blue-light: var(--mm-blue-light);
+  --blue-pale: var(--mm-blue-light-alt);
+  --coral: var(--mm-coral-alt);
+  --coral-soft: var(--mm-coral);
+  --salmon: var(--mm-coral-soft);
+  --salmon-light: var(--mm-peach);
+  --mustard: var(--mm-gold);
+  --mustard-dark: var(--mm-gold);
+  --cream: var(--mm-cream);
+  --cream-light: var(--mm-cream);
+  --beige-card: var(--mm-cream);
+  --white: var(--mm-white);
+  --peach: var(--mm-peach);
+  --yellow-icon: var(--mm-gold);
+  --yellow-card: var(--mm-gold);
+  --text-dark: #2a2a2a;
+  --text-muted: #555555;
+
+  /* Typography (CharOverride / font families from export) */
+  --font-apparat: 'Plus Jakarta Sans', 'Apparat Medium', system-ui, sans-serif;
+  --font-apparat-semibold: 'Plus Jakarta Sans', 'Apparat Semibold', system-ui, sans-serif;
+  --font-apparat-extrabold: 'Plus Jakarta Sans', 'Apparat Extrabold', system-ui, sans-serif;
+  --font-lipsum: 'Libre Baskerville', Lipsum, Georgia, serif;
+  --font-sans: var(--font-apparat);
+  --font-serif: var(--font-lipsum);
+
+  /* InDesign scaled sizes (595px artboard → rem) */
+  --mm-section-number: clamp(2.75rem, 6.9vw, 4.1rem); /* 41px */
+  --mm-nav-size: 0.75rem; /* ~6px scaled */
+  --mm-body-size: 0.8125rem; /* ~7px scaled */
+  --mm-hero-overlay-size: 0.8125rem; /* 13px at artboard */
+  --mm-quote-size: clamp(1.5rem, 3.3vw, 2.06rem); /* 33px Lipsum */
+  --mm-heading-caps: 1.0625rem; /* 17px uppercase */
+
+  /* Radii from ObjectStyleOverride */
+  --mm-radius-pill: 999px;
+  --mm-radius-card-sm: 10px;
+  --mm-radius-card-md: 11px;
+  --mm-radius-card-lg: 14px;
+  --mm-radius-hero-overlay: 51px; /* border-top-left-radius on overlay block */
+  --mm-border-blue: 1px solid var(--mm-blue);
+  --mm-border-gold: 1px solid var(--mm-gold);
+  --mm-border-coral: 1px solid var(--mm-coral-alt);
+
+  --max-width: 1200px;
+  --section-padding: 3.5rem 2rem;
+}
+
+/* Semantic typography utilities from CharOverride classes */
+.mm-text-nav {
+  font-family: var(--font-apparat);
+  font-size: var(--mm-nav-size);
+  font-weight: 500;
+  color: var(--mm-blue);
+}
+
+.mm-text-nav--coral {
+  color: var(--mm-coral-alt);
+  font-family: var(--font-apparat-extrabold);
+  font-weight: 800;
+}
+
+.mm-text-nav--cream {
+  color: var(--mm-cream);
+}
+
+.mm-text-cta-gold {
+  font-family: var(--font-apparat);
+  font-size: 0.3125rem;
+  font-weight: 500;
+  color: var(--mm-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.mm-text-section-number {
+  font-family: var(--font-apparat-semibold);
+  font-size: var(--mm-section-number);
+  font-weight: 600;
+  color: var(--mm-blue);
+  line-height: 1;
+}
+
+.mm-text-section-title {
+  font-family: var(--font-apparat);
+  font-size: var(--mm-heading-caps);
+  font-weight: 500;
+  color: var(--mm-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.mm-text-quote {
+  font-family: var(--font-lipsum);
+  font-size: var(--mm-quote-size);
+  font-weight: 500;
+  color: var(--mm-blue-accent);
+  line-height: 1.35;
+}
+
+.mm-text-quote--coral {
+  color: var(--mm-coral-alt);
+}
+
+.mm-text-hero-overlay {
+  font-family: var(--font-apparat);
+  font-size: var(--mm-hero-overlay-size);
+  font-weight: 500;
+  color: var(--mm-white);
+  line-height: 1.55;
+}
+
+.mm-text-body {
+  font-family: var(--font-apparat);
+  font-size: var(--mm-body-size);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.75;
+}
+
+/* Surface utilities from _idGenObjectStyleOverride */
+.mm-surface-cream {
+  background-color: var(--mm-cream);
+}
+
+.mm-surface-white {
+  background-color: var(--mm-white);
+}
+
+.mm-surface-blue {
+  background-color: var(--mm-blue);
+}
+
+.mm-surface-blue-light {
+  background-color: var(--mm-blue-light);
+}
+
+.mm-surface-coral {
+  background-color: var(--mm-coral-alt);
+}
+
+.mm-surface-gold {
+  background-color: var(--mm-gold);
+}
+
+.mm-surface-peach {
+  background-color: var(--mm-peach);
+}
+
+.mm-btn-pill-gold {
+  border: var(--mm-border-gold);
+  border-radius: var(--mm-radius-pill);
+  color: var(--mm-gold);
+  background: transparent;
+}
+
+.mm-btn-pill-blue {
+  border: var(--mm-border-blue);
+  border-radius: var(--mm-radius-card-md);
+  color: var(--mm-blue);
+  background: transparent;
+}
+
+.mm-hero-overlay-box {
+  background-color: var(--mm-blue-light);
+  border-radius: 0 51px 0 0;
+}

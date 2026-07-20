@@ -1,0 +1,167 @@
+@import './styles/design-tokens.css';
+@import './styles/idGeneratedStyles.css';
+@import './styles/indesign-web.css';
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: #efebe8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.4rem;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn-pill:hover {
+  opacity: 0.85;
+}
+
+.btn-pill--gold {
+  border: 1px solid #ecbe54;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.btn-pill--blue {
+  border: 1px solid #2050d0;
+  border-radius: 11px;
+  background: transparent;
+}
+
+.btn-pill--white {
+  border: 1px solid #ffffff;
+  border-radius: 11px;
+  background: transparent;
+}
+
+.btn-pill--mustard {
+  border: 1px solid #ecbe54;
+  border-radius: 10px;
+  background: #ecbe54;
+}
+
+.btn-pill--outline {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  .btn-pill {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+    padding: 0.55rem 1rem;
+  }
+}
+
+@keyframes mm-star-twinkle {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  25% {
+    transform: rotate(10deg) scale(1.1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: rotate(-8deg) scale(1.05);
+    opacity: 0.95;
+  }
+
+  75% {
+    transform: rotate(12deg) scale(1.12);
+    opacity: 0.88;
+  }
+}
+
+.mm-star-animate {
+  animation: mm-star-twinkle 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes mm-arrow-sway {
+  0%,
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: rotate(5deg) translate(1px, -2px);
+    opacity: 0.92;
+  }
+
+  50% {
+    transform: rotate(-4deg) translate(-1px, 1px);
+    opacity: 0.96;
+  }
+
+  75% {
+    transform: rotate(6deg) translate(2px, -1px);
+    opacity: 0.9;
+  }
+}
+
+.mm-arrow-animate {
+  animation: mm-arrow-sway 3.4s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-star-animate {
+    animation: none;
+  }
+
+  .hero__star {
+    animation: none;
+  }
+
+  .mm-arrow-animate {
+    animation: none;
+  }
+}

@@ -1,0 +1,18 @@
+.logo {
+  display: block;
+  line-height: 0;
+}
+
+.logo__image {
+  display: block;
+  width: auto;
+  height: clamp(4.5rem, 12vw, 7.5rem);
+  max-width: min(17rem, 72vw);
+}
+
+@media (max-width: 600px) {
+  .logo__image {
+    height: clamp(3.75rem, 16vw, 5rem);
+    max-width: min(14rem, 78vw);
+  }
+}

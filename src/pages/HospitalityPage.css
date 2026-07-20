@@ -1,0 +1,491 @@
+.hospitality {
+  background: var(--cream-light);
+}
+
+.hosp-hero {
+  padding: 1.5rem 0 3.5rem;
+  overflow: visible;
+}
+
+.hosp-hero .container {
+  overflow: visible;
+}
+
+.hosp-hero__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: visible;
+}
+
+.hosp-hero__image-wrap {
+  position: relative;
+  width: min(720px, 100%);
+  overflow: visible;
+  --hosp-overlay-room: min(240px, 34vw);
+  --hosp-overlay-overlap: 24px;
+  padding-right: var(--hosp-overlay-room);
+}
+
+.hosp-hero__image {
+  width: 100%;
+  height: clamp(240px, 52vw, 380px);
+  object-fit: cover;
+  border-radius: 1.5rem 0 1.5rem 0;
+  display: block;
+}
+
+.hosp-hero__overlay-box {
+  position: absolute;
+  left: 100%;
+  right: auto;
+  top: 50%;
+  bottom: auto;
+  /* Place the card so only a small "edge" overlaps the image. */
+  transform: translate(calc(-1 * var(--hosp-overlay-room) - var(--hosp-overlay-overlap)), -50%);
+  width: min(420px, 40vw);
+  max-width: none;
+  background: var(--mm-blue);
+  padding: 1.75rem 2rem;
+  border-radius: 0 51px 0 51px;
+  z-index: 2;
+}
+
+.hosp-hero__headline {
+  color: var(--mm-white);
+  font-family: var(--font-apparat);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.hosp-hero__headline em {
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hosp-hero__subtext {
+  color: var(--mm-white);
+  font-family: var(--font-apparat);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+.hosp-hero__starburst {
+  position: absolute;
+  bottom: 2rem;
+  left: 38%;
+  z-index: 3;
+}
+
+.hosp-hero__starburst .mm-star-animate {
+  animation-duration: 5s;
+  animation-delay: -2s;
+}
+
+.hosp-hero__quote {
+  max-width: 560px;
+  margin-top: 2.5rem;
+}
+
+.hosp-programmes {
+  background: var(--white);
+  padding: 4rem 0;
+}
+
+.hosp-moment {
+  max-width: 680px;
+  margin-bottom: 2.5rem;
+}
+
+.hosp-moment__headline {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--mm-blue);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.hosp-moment__headline em {
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mm-coral-alt);
+}
+
+.hosp-moment__body {
+  font-family: var(--font-apparat);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-body, #3a3a3a);
+}
+
+.hosp-moment__body p + p {
+  margin-top: 0.75rem;
+}
+
+.hosp-moment__highlight {
+  font-weight: 700;
+  color: var(--mm-blue);
+}
+
+.hosp-moment__body strong {
+  font-weight: 700;
+}
+
+.hosp-moment__pillars-title {
+  font-family: var(--font-apparat);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 700;
+  color: var(--mm-blue);
+  margin-top: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.hosp-programmes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+}
+
+.hosp-programmes__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hosp-programmes__icon {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1.5px solid var(--salmon-light);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hosp-programmes__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.hosp-programmes__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.25rem;
+}
+
+.hosp-programmes__desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.hosp-flagship {
+  background: var(--mm-blue);
+  padding: 3.5rem 0;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hosp-flagship__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hosp-flagship__heading-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.hosp-flagship__number {
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hosp-flagship__title {
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hosp-flagship__book-icon {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.hosp-flagship__book-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.hosp-flagship__content {
+  position: relative;
+  min-height: 300px;
+  margin-bottom: 2rem;
+}
+
+.hosp-flagship__orange-box {
+  position: relative;
+  z-index: 2;
+  background: var(--mm-coral-alt);
+  padding: 2rem 2.25rem;
+  max-width: 52%;
+  border-radius: 51px 0 51px 0;
+}
+
+.hosp-flagship__orange-box p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--white);
+}
+
+.hosp-flagship__peach-circle {
+  position: absolute;
+  right: 18%;
+  top: 5%;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: var(--peach);
+  z-index: 1;
+}
+
+.hosp-flagship__person-wrap {
+  position: absolute;
+  right: 12%;
+  top: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.hosp-flagship__person {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.hosp-flagship__buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hosp-flagship__buttons .btn-pill {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.hosp-flagship__buttons .btn-pill .CharOverride-25 {
+  color: var(--white);
+}
+
+.hosp-gallery {
+  padding: 0 0 3rem;
+  background: var(--cream-light);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+.hosp-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.hosp-gallery__item {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0 18px 0 0;
+}
+
+.hosp-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hosp-flagship__custom-title {
+  font-size: clamp(1.05rem, 1.9vw, 1.35rem);
+  line-height: 1.35;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.hosp-flagship__custom-body {
+  font-size: 0.9rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hosp-flagship__custom-body + .hosp-flagship__custom-body {
+  margin-top: 0.65rem;
+}
+
+.hosp-flagship__custom-contact {
+  margin-top: 0.95rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hosp-flagship__custom-link {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hosp-flagship__custom-link:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .hosp-hero {
+    padding: 1.25rem 0 2.5rem;
+  }
+
+  .hosp-hero__image-wrap {
+    width: 100%;
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .hosp-hero__overlay-box {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+    width: auto;
+    margin-top: -1.25rem;
+    max-width: 100%;
+  }
+
+  .hosp-hero__quote {
+    margin-top: 1.5rem;
+    max-width: none;
+  }
+
+  .hosp-programmes {
+    padding: 3rem 0;
+  }
+
+  .hosp-programmes__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hosp-flagship {
+    padding: 2.75rem 0;
+  }
+
+  .hosp-flagship__header {
+    flex-wrap: wrap;
+  }
+
+  .hosp-flagship__orange-box {
+    max-width: 100%;
+  }
+
+  .hosp-flagship__peach-circle {
+    width: 160px;
+    height: 160px;
+    right: 5%;
+  }
+
+  .hosp-flagship__person-wrap {
+    width: 160px;
+    height: 160px;
+    right: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hosp-hero__overlay-box {
+    padding: 1.35rem 1.25rem;
+    border-radius: 0 36px 0 36px;
+  }
+
+  .hosp-hero__headline {
+    font-size: clamp(1.05rem, 5vw, 1.25rem);
+  }
+
+  .hosp-hero__subtext {
+    font-size: 0.72rem;
+  }
+
+  .hosp-hero__starburst {
+    left: auto;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .hosp-flagship__content {
+    min-height: auto;
+    padding-bottom: 200px;
+  }
+
+  .hosp-flagship__orange-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hosp-flagship__orange-box p {
+    font-size: 0.92rem;
+  }
+
+  .hosp-flagship__custom-title {
+    font-size: 1rem;
+  }
+
+  .hosp-flagship__custom-body,
+  .hosp-flagship__custom-contact {
+    font-size: 0.84rem;
+  }
+
+  .hosp-flagship__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hosp-flagship__buttons .btn-pill {
+    width: 100%;
+  }
+
+  .hosp-flagship__person-wrap {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .hosp-flagship__peach-circle {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

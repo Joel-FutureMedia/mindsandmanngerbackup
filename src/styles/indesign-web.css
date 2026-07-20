@@ -1,0 +1,241 @@
+/**
+ * Web layer on top of idGeneratedStyles.css
+ * - Maps Apparat / Lipsum to web fonts
+ * - Scales InDesign px (595px artboard) for responsive screens
+ * - Binds layout components to ObjectStyleOverride surfaces
+ */
+
+:root {
+  --id-scale: 2;
+}
+
+/* Font family overrides for exported InDesign names */
+span.CharOverride-1,
+span.CharOverride-28 {
+  font-family: var(--font-apparat-semibold), 'Apparat Semibold', sans-serif !important;
+}
+
+span.CharOverride-5,
+span.CharOverride-14,
+span.CharOverride-19,
+span.CharOverride-36 {
+  font-family: var(--font-apparat-extrabold), 'Apparat Extrabold', sans-serif !important;
+}
+
+span.CharOverride-2,
+span.CharOverride-3,
+span.CharOverride-4,
+span.CharOverride-6,
+span.CharOverride-7,
+span.CharOverride-8,
+span.CharOverride-11,
+span.CharOverride-12,
+span.CharOverride-13,
+span.CharOverride-16,
+span.CharOverride-18,
+span.CharOverride-21,
+span.CharOverride-23,
+span.CharOverride-25,
+span.CharOverride-26,
+span.CharOverride-29,
+span.CharOverride-30,
+span.CharOverride-31,
+span.CharOverride-32,
+span.CharOverride-33,
+span.CharOverride-34,
+span.CharOverride-37 {
+  font-family: var(--font-apparat), 'Apparat Medium', sans-serif !important;
+}
+
+span.CharOverride-9,
+span.CharOverride-15,
+span.CharOverride-20,
+span.CharOverride-22,
+span.CharOverride-24,
+span.CharOverride-35 {
+  font-family: var(--font-apparat), Apparat, sans-serif !important;
+}
+
+span.CharOverride-10,
+span.CharOverride-17,
+span.CharOverride-27 {
+  font-family: var(--font-lipsum), Lipsum, serif !important;
+}
+
+/* Scaled type sizes */
+span.CharOverride-1,
+span.CharOverride-28 {
+  font-size: clamp(2.5rem, 6.9vw, 4.1rem) !important;
+  line-height: 1 !important;
+}
+
+span.CharOverride-2,
+span.CharOverride-30 {
+  font-size: 1.0625rem !important;
+}
+
+span.CharOverride-3,
+span.CharOverride-18,
+span.CharOverride-34 {
+  font-size: 0.875rem !important;
+}
+
+span.CharOverride-4,
+span.CharOverride-26,
+span.CharOverride-31 {
+  font-size: 0.625rem !important;
+  letter-spacing: 0.1em;
+}
+
+span.CharOverride-5,
+span.CharOverride-6,
+span.CharOverride-8,
+span.CharOverride-12,
+span.CharOverride-15,
+span.CharOverride-16,
+span.CharOverride-29 {
+  font-size: 0.75rem !important;
+}
+
+span.CharOverride-7,
+span.CharOverride-21,
+span.CharOverride-35,
+span.CharOverride-37 {
+  font-size: 0.875rem !important;
+}
+
+span.CharOverride-9,
+span.CharOverride-20,
+span.CharOverride-24 {
+  font-size: 0.75rem !important;
+}
+
+span.CharOverride-10,
+span.CharOverride-17,
+span.CharOverride-27 {
+  font-size: clamp(1.35rem, 3.3vw, 2.06rem) !important;
+  line-height: 1.35 !important;
+}
+
+span.CharOverride-11,
+span.CharOverride-14,
+span.CharOverride-25 {
+  font-size: 0.8125rem !important;
+}
+
+span.CharOverride-13,
+span.CharOverride-32 {
+  font-size: 0.875rem !important;
+  letter-spacing: 0.12em;
+}
+
+span.CharOverride-19 {
+  font-size: 0.75rem !important;
+}
+
+span.CharOverride-22 {
+  font-size: 0.8125rem !important;
+}
+
+span.CharOverride-23 {
+  font-size: 0.8125rem !important;
+  line-height: 1.55 !important;
+}
+
+span.CharOverride-33,
+span.CharOverride-36 {
+  font-size: 1rem !important;
+}
+
+/* Surface utilities from _idGenObjectStyleOverride */
+.mm-surface-cream {
+  background-color: #efebe8;
+}
+
+.mm-surface-blue-light {
+  background-color: #82a6f2;
+}
+
+.mm-surface-blue {
+  background-color: #2050d0;
+}
+
+.mm-surface-coral {
+  background-color: #f36849;
+}
+
+.mm-surface-gold {
+  background-color: #ecbe54;
+}
+
+.mm-surface-peach {
+  background-color: #fcded6;
+}
+
+.mm-surface-white {
+  background-color: #ffffff;
+}
+
+.mm-border-gold-pill {
+  border: 1px solid #ecbe54;
+  border-radius: 10px;
+}
+
+.mm-border-blue-pill {
+  border: 1px solid #2050d0;
+  border-radius: 11px;
+}
+
+.mm-hero-overlay-box {
+  background-color: #82a6f2;
+  border-radius: 0 51px 0 0;
+}
+
+.mm-card-blue-tl {
+  background-color: #2050d0;
+  border-radius: 51px 0 0 0;
+}
+
+.mm-card-coral-br {
+  background-color: #f36849;
+  border-radius: 0 0 51px 0;
+}
+
+.mm-stat-peach {
+  background-color: #fcded6;
+}
+
+.mm-stat-gold {
+  background-color: #ecbe54;
+}
+
+.mm-stat-cream {
+  background-color: #efebe8;
+}
+
+.mm-stat-blue {
+  background-color: #2050d0;
+}
+
+/* Layout helpers */
+.home,
+.header {
+  background-color: #efebe8;
+}
+
+p.ParaOverride-4 {
+  margin-bottom: 0.75rem;
+}
+
+blockquote {
+  border: none;
+}
+
+button .CharOverride-4 {
+  display: inline-block;
+}
+
+a .CharOverride-5,
+a .CharOverride-6 {
+  display: inline-block;
+}
