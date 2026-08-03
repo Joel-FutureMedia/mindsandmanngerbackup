@@ -66,7 +66,15 @@
   --mm-border-coral: 1px solid var(--mm-coral-alt);
 
   --max-width: 1200px;
-  --section-padding: 3.5rem 2rem;
+  /* Vertical only — horizontal inset comes from .container to avoid double padding */
+  --section-padding: 3.5rem 0;
+  --section-padding-sm: 2.5rem 0;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3.5rem;
+  --radius-btn: 10px;
 }
 
 /* Semantic typography utilities from CharOverride classes */

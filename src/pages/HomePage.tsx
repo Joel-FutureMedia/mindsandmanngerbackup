@@ -258,29 +258,25 @@ export default function HomePage() {
         <div className="container">
           <div className="human-side">
             <div className="human-side__panel">
-              <div className="human-side__header">
+              <div className="human-side__accent" aria-hidden="true">
                 <img
                   src={starIcon}
                   alt=""
                   className="human-side__star mm-star-animate"
-                  aria-hidden="true"
                   decoding="async"
                 />
+                <div className="human-side__rule" />
+              </div>
+
+              <div className="human-side__content">
                 <h2 id="human-side-title" className="human-side__title">
                   <span className="CharOverride-13">The Human Side of Service</span>
                 </h2>
-              </div>
-              <div className="human-side__copy">
-                <div className="human-side__rule" aria-hidden="true" />
+
                 <div className="human-side__body">
                   <p className="ParaOverride-4">
                     <span className="CharOverride-11">
-                      Every exceptional experience begins in the same place — not in a manual, process, or script.
-                    </span>
-                  </p>
-                  <p className="ParaOverride-4">
-                    <span className="CharOverride-11">
-                      It begins in the mind of the person facing another human being.
+                      Every exceptional experience begins in the same place - not in a manual, process, or script. It begins in the mind of the person facing another human being.
                     </span>
                   </p>
                   <p className="ParaOverride-4 human-side__closing">
@@ -404,12 +400,11 @@ export default function HomePage() {
           <div className="audiences__relevance-intro">
             <h3 className="audiences__relevance-heading">
               <span className="CharOverride-13">Relevance</span>
-              <span className="audiences__relevance-subtitle">
-                <span className="CharOverride-11">— if your team is human, we&apos;re for you.</span>
-              </span>
             </h3>
             <p className="audiences__relevance-lead ParaOverride-4">
-              <span className="CharOverride-11">Service is a feeling. And feelings come from people.</span>
+              <span className="CharOverride-11">
+                If your team is human, we&apos;re for you. Service is a feeling. And feelings come from people.
+              </span>
             </p>
           </div>
 
@@ -418,46 +413,33 @@ export default function HomePage() {
               <Link to="/hospitality" className="audiences__card audiences__card--blue">
                 <div className="audiences__card-surface">
                   <img src={blueShape} alt="" className="audiences__shape" aria-hidden="true" loading="lazy" decoding="async" />
-                  <div className="audiences__card-text ParaOverride-4">
-                    <span className="CharOverride-21">
-                      Whether you welcome
-                      <br />
-                      guests at a lodge or serve
-                      <br />
-                      customers on the phone, as
-                      <br />
-                      a cashier, on the floor or in
-                      <br />
-                      a boardroom, your people
-                      <br />
-                      are your biggest asset - and
-                      <br />
-                      your biggest risk.
-                    </span>
+                  <div className="audiences__card-text audiences__card-text--blue-shaped">
+                    <span className="audiences__shape-line audiences__shape-line--b1 CharOverride-21">Whether you welcome</span>
+                    <span className="audiences__shape-line audiences__shape-line--b2 CharOverride-21">guests at a lodge or serve</span>
+                    <span className="audiences__shape-line audiences__shape-line--b3 CharOverride-21">customers on the phone, as</span>
+                    <span className="audiences__shape-line audiences__shape-line--b4 CharOverride-21">a cashier, on the floor or in</span>
+                    <span className="audiences__shape-line audiences__shape-line--b5 CharOverride-21">a boardroom, your people</span>
+                    <span className="audiences__shape-line audiences__shape-line--b6 CharOverride-21">are your biggest asset - and</span>
+                    <span className="audiences__shape-line audiences__shape-line--b7 CharOverride-21">your biggest risk.</span>
                   </div>
                 </div>
               </Link>
               <Link to="/service" className="audiences__card audiences__card--coral">
                 <div className="audiences__card-surface">
                   <img src={anotherShape} alt="" className="audiences__shape" aria-hidden="true" loading="lazy" decoding="async" />
-                  <div className="audiences__card-text ParaOverride-4">
-                    <span className="CharOverride-21">
-                      Technical training
-                      <br />
-                      teaches what to do.
-                      <br />
+                  <div className="audiences__card-text audiences__card-text--coral-shaped">
+                    <span className="audiences__shape-line audiences__shape-line--c1 CharOverride-21">Technical training</span>
+                    <span className="audiences__shape-line audiences__shape-line--c2 CharOverride-21">teaches what to do.</span>
+                    <span className="audiences__shape-line audiences__shape-line--c3 CharOverride-21">
                       We focus on <strong>who is</strong>
-                      <br />
-                      <strong>doing it</strong> - the mindset,
-                      <br />
-                      emotional intelligence,
-                      <br />
-                      and personal presence
-                      <br />
-                      that turn transactions into
-                      <br />
-                      connections.
                     </span>
+                    <span className="audiences__shape-line audiences__shape-line--c4 CharOverride-21">
+                      <strong>doing it</strong> - the mindset,
+                    </span>
+                    <span className="audiences__shape-line audiences__shape-line--c5 CharOverride-21">emotional intelligence,</span>
+                    <span className="audiences__shape-line audiences__shape-line--c6 CharOverride-21">and personal presence</span>
+                    <span className="audiences__shape-line audiences__shape-line--c7 CharOverride-21">that turn transactions into</span>
+                    <span className="audiences__shape-line audiences__shape-line--c8 CharOverride-21">connections.</span>
                   </div>
                 </div>
               </Link>

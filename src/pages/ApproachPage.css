@@ -1,5 +1,8 @@
 .approach-page {
   background: var(--cream-light);
+  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Hero — split editorial layout (distinct from overlay-card heroes) */
@@ -66,6 +69,8 @@
 
 .approach-hero__media {
   position: relative;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .approach-hero__image {
@@ -80,8 +85,8 @@
 
 .approach-hero__shape {
   position: absolute;
-  top: -1.25rem;
-  right: -1.25rem;
+  top: 0;
+  right: 0;
   width: 45%;
   height: 45%;
   background: var(--mm-blue);
@@ -106,7 +111,7 @@
 
 /* Philosophy */
 .approach-philosophy {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
   background: var(--cream-light);
 }
 
@@ -155,7 +160,7 @@
 
 /* Methodology */
 .approach-methodology {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
   background: var(--mm-blue);
   color: var(--white);
 }
@@ -256,6 +261,9 @@
   padding: 0.65rem 1.15rem;
   border-radius: 2rem;
   border: 1.5px solid rgba(30, 75, 189, 0.12);
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
 }
 
 .approach-not__item:last-child {
@@ -272,7 +280,7 @@
 
 /* Engagement journey */
 .approach-journey {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
   background: var(--cream-light);
 }
 
@@ -312,6 +320,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  height: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .approach-journey__step-num {
@@ -361,9 +372,9 @@
   font-weight: 700;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .approach-hero {
-    padding: 2rem 0 2.5rem;
+    padding: 2rem 0 2.75rem;
   }
 
   .approach-hero__grid {
@@ -373,15 +384,32 @@
 
   .approach-hero__media {
     max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .approach-hero__text {
+    max-width: none;
+  }
+
+  .approach-journey__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .approach-hero {
+    padding: 1.75rem 0 2.25rem;
   }
 
   .approach-philosophy {
-    padding: 3rem 0;
+    padding: 2.75rem 0;
   }
 
   .approach-philosophy__layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    gap: 1.5rem;
   }
 
   .approach-philosophy__quote {
@@ -400,6 +428,10 @@
     grid-template-columns: 1fr;
   }
 
+  .approach-methodology__item {
+    padding: 1.35rem 0;
+  }
+
   .approach-methodology__item:nth-child(odd) {
     padding-right: 0;
     border-right: none;
@@ -409,13 +441,14 @@
     padding-left: 0;
   }
 
-  .approach-journey__steps {
-    grid-template-columns: 1fr;
+  .approach-methodology,
+  .approach-journey,
+  .approach-not {
+    padding: 2.75rem 0;
   }
 
-  .approach-methodology,
-  .approach-journey {
-    padding: 3rem 0;
+  .approach-journey__header {
+    max-width: none;
   }
 }
 
@@ -424,11 +457,58 @@
     font-size: clamp(1.75rem, 8vw, 2.25rem);
   }
 
+  .approach-hero__lead {
+    font-size: clamp(0.98rem, 4vw, 1.1rem);
+  }
+
+  .approach-hero__text {
+    font-size: 0.84rem;
+  }
+
   .approach-not__item {
     font-size: 0.82rem;
+    padding: 0.55rem 0.95rem;
+  }
+
+  .approach-not__item:last-child {
+    font-size: 0.88rem;
+  }
+
+  .approach-journey__steps {
+    grid-template-columns: 1fr;
   }
 
   .approach-journey__step {
     padding: 1.25rem 1rem;
+  }
+
+  .approach-journey__cta .btn-pill {
+    width: 100%;
+    max-width: 18rem;
+    white-space: normal;
+  }
+
+  .approach-note {
+    padding: 1.75rem 0 2.25rem;
+  }
+
+  .approach-note__text {
+    font-size: 0.84rem;
+    padding: 0 0.25rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .approach-hero__title {
+    font-size: 1.65rem;
+  }
+
+  .approach-methodology__item {
+    gap: 0.9rem;
+  }
+
+  .approach-methodology__number {
+    min-width: 2rem;
+    font-size: 1.5rem;
   }
 }

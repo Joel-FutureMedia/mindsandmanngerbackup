@@ -32,7 +32,13 @@ button {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 2rem);
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: max(
+    clamp(1rem, 4vw, 2rem),
+    env(safe-area-inset-left, 0px),
+    env(safe-area-inset-right, 0px)
+  );
 }
 
 .section-heading {
@@ -48,9 +54,14 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 2.5rem;
   padding: 0.55rem 1.4rem;
+  border-radius: var(--radius-btn, 10px);
   transition: opacity 0.2s;
   white-space: nowrap;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.25;
 }
 
 .btn-pill:hover {
@@ -59,31 +70,31 @@ button {
 
 .btn-pill--gold {
   border: 1px solid #ecbe54;
-  border-radius: 10px;
+  border-radius: var(--radius-btn, 10px);
   background: transparent;
 }
 
 .btn-pill--blue {
   border: 1px solid #2050d0;
-  border-radius: 11px;
+  border-radius: var(--radius-btn, 10px);
   background: transparent;
 }
 
 .btn-pill--white {
   border: 1px solid #ffffff;
-  border-radius: 11px;
+  border-radius: var(--radius-btn, 10px);
   background: transparent;
 }
 
 .btn-pill--mustard {
   border: 1px solid #ecbe54;
-  border-radius: 10px;
+  border-radius: var(--radius-btn, 10px);
   background: #ecbe54;
 }
 
 .btn-pill--outline {
   border: 1px solid #000000;
-  border-radius: 10px;
+  border-radius: var(--radius-btn, 10px);
   background: transparent;
 }
 
@@ -93,6 +104,7 @@ button {
     text-align: center;
     line-height: 1.35;
     padding: 0.55rem 1rem;
+    min-height: 2.65rem;
   }
 }
 

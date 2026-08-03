@@ -92,52 +92,54 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
           <span className="header__menu-toggle-label">{menuOpen ? 'Close' : 'Menu'}</span>
         </button>
 
-        <nav className="header__nav header__nav--left" aria-label="Primary">
-          <NavLink to="/" coral={isHome} onNavigate={closeMenu}>
-            About Us
-          </NavLink>
-          <NavLink to="/hospitality" coral={isHospitality} onNavigate={closeMenu}>
-            For Hospitality
-          </NavLink>
-          <NavLink to="/service" coral={isService} onNavigate={closeMenu}>
-            For Service Industries
-          </NavLink>
-          <NavLink to="/school-youth" coral={isYouth} onNavigate={closeMenu}>
-            For School &amp; Youths
-          </NavLink>
-        </nav>
+        <div className="header__bar">
+          <nav className="header__nav header__nav--left" aria-label="Primary">
+            <NavLink to="/" coral={isHome} onNavigate={closeMenu}>
+              About Us
+            </NavLink>
+            <NavLink to="/hospitality" coral={isHospitality} onNavigate={closeMenu}>
+              For Hospitality
+            </NavLink>
+            <NavLink to="/service" coral={isService} onNavigate={closeMenu}>
+              For Service Industries
+            </NavLink>
+            <NavLink to="/school-youth" coral={isYouth} onNavigate={closeMenu}>
+              For School &amp; Youths
+            </NavLink>
+          </nav>
 
-        <div className="header__logo">
-          <Logo />
-        </div>
-
-        <nav className="header__nav header__nav--right" aria-label="Secondary">
-          <NavLink to="/approach" coral={isApproach} onNavigate={closeMenu}>
-            Our Approach
-          </NavLink>
-          <NavLink to="/impact" coral={isImpact} onNavigate={closeMenu}>
-            Impact
-          </NavLink>
-          <div className="header__cta-anchor header__cta-anchor--desktop">
-            <div className="header__actions">
-              <div className="header__cta">{ctaButton}</div>
-              <img
-                src={arrowIcon}
-                alt=""
-                className="header__contact-arrow mm-arrow-animate"
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          <div className="header__logo">
+            <Logo />
           </div>
-          <SectionLink to="/#about" onNavigate={closeMenu}>
-            About
-          </SectionLink>
-          <SectionLink to="/#contact" onNavigate={closeMenu}>
-            Contact
-          </SectionLink>
-        </nav>
+
+          <nav className="header__nav header__nav--right" aria-label="Secondary">
+            <NavLink to="/approach" coral={isApproach} onNavigate={closeMenu}>
+              Our Approach
+            </NavLink>
+            <NavLink to="/impact" coral={isImpact} onNavigate={closeMenu}>
+              Impact
+            </NavLink>
+            <div className="header__cta-anchor header__cta-anchor--desktop">
+              <div className="header__actions">
+                <div className="header__cta">{ctaButton}</div>
+                <img
+                  src={arrowIcon}
+                  alt=""
+                  className="header__contact-arrow mm-arrow-animate"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <SectionLink to="/#about" onNavigate={closeMenu}>
+              About
+            </SectionLink>
+            <SectionLink to="/#contact" onNavigate={closeMenu}>
+              Contact
+            </SectionLink>
+          </nav>
+        </div>
 
         <div id="header-mobile-nav" className="header__mobile-panel">
           <nav className="header__mobile-links" aria-label="Mobile">
