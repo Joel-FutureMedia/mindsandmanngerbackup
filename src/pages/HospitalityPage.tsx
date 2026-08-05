@@ -7,12 +7,6 @@ import {
   hospGallery1,
   hospGallery2,
   hospGallery3,
-  hospGallery4,
-  hospGallery5,
-  hospGallery6,
-  hospGallery7,
-  hospGallery8,
-  hospGallery9,
   hospHeroImg,
 } from '../assets/siteImages'
 import SiteImage from '../components/SiteImage'
@@ -22,12 +16,6 @@ const hospitalityGallery = [
   { src: hospGallery1, alt: 'Curated hospitality experience' },
   { src: hospGallery2, alt: 'Guest welcome at a lodge' },
   { src: hospGallery3, alt: 'Fine dining service' },
-  { src: hospGallery4, alt: 'Hotel reception warmth' },
-  { src: hospGallery5, alt: 'Safari lodge hospitality' },
-  { src: hospGallery6, alt: 'Restaurant service excellence' },
-  { src: hospGallery7, alt: 'Tourism team in action' },
-  { src: hospGallery8, alt: 'Guest-facing professional' },
-  { src: hospGallery9, alt: 'Luxury hospitality moment' },
 ]
 
 const programmes = [
@@ -40,7 +28,7 @@ const programmes = [
       </svg>
     ),
     title: 'Personal Mastery',
-    description: 'Emotional intelligence, self-awareness, personal storytelling & confidence.',
+    description: 'Emotional intelligence, self-awareness, mindset, personal storytelling & confidence.',
   },
   {
     icon: (
@@ -51,7 +39,7 @@ const programmes = [
       </svg>
     ),
     title: 'Communication & Connection',
-    description: 'Cross-cultural communication, deep listening, reading the room.',
+    description: 'Communication, deep listening, reading the room, handling difficult conversations, and building trust through genuine human connection.',
   },
   {
     icon: (
@@ -61,7 +49,7 @@ const programmes = [
       </svg>
     ),
     title: 'Service Excellence',
-    description: 'Authentic guest experiences, handling pressure with grace, consistency.',
+    description: 'Authentic guest and customer experiences, handling pressure with grace, consistency, service recovery, attention to detail, and making people feel seen, valued, and respected.',
   },
   {
     icon: (
@@ -72,7 +60,7 @@ const programmes = [
       </svg>
     ),
     title: 'Brand & Professional Identity',
-    description: "Embodying your lodge's story, representing with pride.",
+    description: "Understanding your organisation's story, values and culture — and representing them with pride, authenticity and professionalism.",
   },
 ]
 
@@ -100,6 +88,10 @@ export default function HospitalityPage() {
                   <span className="CharOverride-23">
                     In luxury hospitality, the difference between good and legendary isn&apos;t the thread count or the wine list. It&apos;s the human being who welcomes the guest, listens to their story, and makes them feel truly seen.
                   </span>
+                </p>
+                <p className="hosp-hero__closer">
+                  <span className="hosp-hero__closer-line" aria-hidden="true" />
+                  <em>We develop that human being.</em>
                 </p>
               </div>
               <span className="hosp-hero__starburst">
@@ -159,62 +151,59 @@ export default function HospitalityPage() {
         </div>
       </section>
 
-      <section className="hosp-flagship">
+      <section className="section hosp-flagship">
         <div className="container">
-          <div className="hosp-flagship__header">
-            <div className="hosp-flagship__heading-group">
-              <span className="hosp-flagship__number CharOverride-1">02</span>
-              <span className="hosp-flagship__title CharOverride-13">Our Flagship</span>
-            </div>
-            <div className="hosp-flagship__book-icon">
-              <svg viewBox="0 0 48 48" fill="none">
-                <rect x="10" y="8" width="28" height="32" rx="2" stroke="white" strokeWidth="1.5" />
-                <path d="M24 8v32" stroke="white" strokeWidth="1.5" />
-                <path d="M16 2l4 6M32 2l-4 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
-            </div>
-          </div>
+          <SectionHeading number="02" title="Our Flagship" />
 
-          <div className="hosp-flagship__content">
-            <div className="hosp-flagship__orange-box _idGenObjectStyleOverride-10">
-              <p className="ParaOverride-4">
-                <span className="CharOverride-21">
-                  Flagship: The Minds &amp; Manners Customer Service Masterclass - immersive, interactive, and tailored to your specific needs from the pillars of transformation.
-                </span>
+          <div className="hosp-flagship__layout">
+            <div className="hosp-flagship__copy">
+              <h3 className="hosp-flagship__title">
+                Flagship: The Minds &amp; Manners Customer Service Masterclass
+              </h3>
+              <p className="hosp-flagship__intro">
+                Immersive, interactive, and tailored to your specific needs from the pillars of transformation.
               </p>
-              <h3 className="hosp-flagship__custom-title">Because One Size Rarely Fits All</h3>
-              <p className="hosp-flagship__custom-body">
-                Every team has its own story, culture, strengths, and challenges. While our core principles remain the same, we regularly customise workshops, masterclasses, and training programmes to address our clients&apos; specific needs.
-              </p>
-              <p className="hosp-flagship__custom-body">
-                We would love to meet with you, learn more about your people and goals, and create a programme tailored to your organisation and the outcomes you want to achieve.
-              </p>
-              <p className="hosp-flagship__custom-contact">
-                For more information, contact{' '}
-                <a href="mailto:manners@onceuponmind.com" className="hosp-flagship__custom-link">
-                  manners@onceuponmind.com
-                </a>
-                .
-              </p>
+              <h4 className="hosp-flagship__headline">
+                Because One Size Rarely Fits <em>All</em>
+              </h4>
+              <div className="hosp-flagship__body">
+                <p>
+                  Every team has its own story, culture, strengths, and challenges. While our core principles remain the same, we regularly customise workshops, masterclasses, and training programmes to address our clients&apos; specific needs.
+                </p>
+                <p className="hosp-flagship__highlight">
+                  We would love to meet with you, learn more about your people and goals, and create a programme tailored to your organisation and the outcomes you want to achieve.
+                </p>
+                <p className="hosp-flagship__contact">
+                  For more information, contact{' '}
+                  <a href="mailto:manners@onceuponmind.com">manners@onceuponmind.com</a>.
+                </p>
+              </div>
+              <div className="hosp-flagship__buttons">
+                <button className="btn-pill btn-pill--outline mm-border-gold-pill">
+                  <span className="CharOverride-25">View Hospitality Programmes</span>
+                </button>
+                <button className="btn-pill btn-pill--blue mm-border-gold-pill">
+                  <span className="CharOverride-25">Download Hospitality Brochure</span>
+                </button>
+              </div>
             </div>
-            <div className="hosp-flagship__peach-circle _idGenObjectStyleOverride-7" />
-            <div className="hosp-flagship__person-wrap">
-              <SiteImage src={hospFlagshipImg} alt="Hospitality professional smiling" className="hosp-flagship__person" loading="lazy" />
-            </div>
-          </div>
 
-          <div className="hosp-flagship__buttons">
-            <button className="btn-pill btn-pill--white mm-border-gold-pill">
-              <span className="CharOverride-25">View Hospitality Programmes</span>
-            </button>
-            <button className="btn-pill btn-pill--white mm-border-gold-pill">
-              <span className="CharOverride-25">Download Hospitality Brochure</span>
-            </button>
+            <div className="hosp-flagship__portrait">
+              <div className="hosp-flagship__portrait-glow" aria-hidden="true" />
+              <div className="hosp-flagship__person-wrap">
+                <SiteImage
+                  src={hospFlagshipImg}
+                  alt="Hospitality professional smiling"
+                  className="hosp-flagship__person"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <Footer variant="cream" />
+      <Footer variant="blue" />
     </div>
   )
 }

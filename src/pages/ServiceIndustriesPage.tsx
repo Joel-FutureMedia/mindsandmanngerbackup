@@ -7,35 +7,15 @@ import {
   serviceGallery1,
   serviceGallery2,
   serviceGallery3,
-  serviceGallery4,
-  serviceGallery5,
-  serviceGallery6,
-  serviceGallery7,
-  serviceGallery8,
-  serviceGallery9,
-  serviceGallery10,
-  serviceGallery11,
-  serviceGallery12,
   serviceHeroImg,
 } from '../assets/siteImages'
 import SiteImage from '../components/SiteImage'
-import serviceBrochureSafari from '../assets/new assets/Service/Safari Guide Hat Face Close-Up.pdf'
-import serviceBrochureTeam from '../assets/new assets/Service/Team Working Together.pdf'
 import './ServiceIndustriesPage.css'
 
 const serviceGallery = [
   { src: serviceGallery1, alt: 'Frontline service professional' },
   { src: serviceGallery2, alt: 'Customer service interaction' },
   { src: serviceGallery3, alt: 'Team delivering service excellence' },
-  { src: serviceGallery4, alt: 'Retail service moment' },
-  { src: serviceGallery5, alt: 'Professional client engagement' },
-  { src: serviceGallery6, alt: 'Service industry teamwork' },
-  { src: serviceGallery7, alt: 'Confident service representative' },
-  { src: serviceGallery8, alt: 'Workplace service culture' },
-  { src: serviceGallery9, alt: 'Engaged service team member' },
-  { src: serviceGallery10, alt: 'Collaborative service environment' },
-  { src: serviceGallery11, alt: 'Professional service delivery' },
-  { src: serviceGallery12, alt: 'Client-facing team member' },
 ]
 
 const challengeSkills = [
@@ -122,9 +102,21 @@ export default function ServiceIndustriesPage() {
                 <StarBurst size={24} />
               </span>
             </div>
-            <blockquote className="service-hero__quote">
-              <span className="CharOverride-17">&ldquo;When your people show up as their best selves, every transaction becomes a chance to build loyalty.&rdquo;</span>
-            </blockquote>
+            <div className="service-hero__statement">
+              <h2 className="service-hero__statement-title">
+                Better Humans, <em>Better Business</em>
+              </h2>
+              <p className="service-hero__statement-tagline">Every business is a people business.</p>
+              <div className="service-hero__statement-body">
+                <p>
+                  Whether you&apos;re in retail, healthcare, finance, or corporate services, your success depends on how your people show up — for customers, for each other, for your brand.
+                </p>
+                <p className="service-hero__statement-closer">
+                  <span className="service-hero__statement-line" aria-hidden="true" />
+                  <em>We help them show up better.</em>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -221,14 +213,8 @@ export default function ServiceIndustriesPage() {
 
           <div className="service-flagship__buttons">
             <button type="button" className="btn-pill btn-pill--white mm-border-gold-pill">
-              <span className="CharOverride-25">View Service Programmes</span>
+              <span className="CharOverride-25">View Service Profile</span>
             </button>
-            <a href={serviceBrochureSafari} download className="btn-pill btn-pill--white mm-border-gold-pill">
-              <span className="CharOverride-25">Download Service Brochure</span>
-            </a>
-            <a href={serviceBrochureTeam} download className="btn-pill btn-pill--white mm-border-gold-pill">
-              <span className="CharOverride-25">Download Team Guide</span>
-            </a>
           </div>
         </div>
       </section>

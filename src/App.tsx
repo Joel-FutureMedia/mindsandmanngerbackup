@@ -9,6 +9,7 @@ const ServiceIndustriesPage = lazy(() => import('./pages/ServiceIndustriesPage')
 const SchoolYouthPage = lazy(() => import('./pages/SchoolYouthPage'))
 const ApproachPage = lazy(() => import('./pages/ApproachPage'))
 const ImpactPage = lazy(() => import('./pages/ImpactPage'))
+const TeamPage = lazy(() => import('./pages/TeamPage'))
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/school-youth" element={<SchoolYouthPage />} />
           <Route path="/approach" element={<ApproachPage />} />
           <Route path="/impact" element={<ImpactPage />} />
+          <Route path="/team" element={<TeamPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

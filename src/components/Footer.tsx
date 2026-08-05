@@ -50,7 +50,7 @@ export default function Footer({ variant = 'blue' }: FooterProps) {
             <Link to="/school-youth"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>For School &amp; Youths</span></Link>
             <Link to="/approach"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Our Approach</span></Link>
             <Link to="/impact"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Impact</span></Link>
-            <Link to="/#about"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>About</span></Link>
+            <Link to="/team"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Team</span></Link>
             <Link to="/#contact"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Contact</span></Link>
           </nav>
           <p className="footer__newsletter"><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Subscribe to our newsletter</span></p>

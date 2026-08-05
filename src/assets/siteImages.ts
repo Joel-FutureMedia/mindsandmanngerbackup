@@ -69,6 +69,11 @@ export { default as serviceGallery12 } from './new assets/Service/towfiqu-barbhu
 export { default as youthHeroImg } from './new assets/Youth - School/jed-villejo-bEcC0nyIp2g-unsplash.jpg?w=960&format=webp&quality=82'
 export { default as youthIntroImg } from './new assets/Youth - School/Laughter and smiles in the park.png?w=800&format=webp&quality=82'
 
+/* Team */
+export { default as teamHeroImg } from './images/hero-team.jpg?w=1200&format=webp&quality=82'
+export { default as teamChristineImg } from './new assets/Carousel 2/Screenshot 2026-04-15 at 19.26.28.png?w=560&format=webp&quality=82'
+export { default as teamElmarieImg } from './new assets/General/curated-lifestyle-MkFbIx9AQqA-unsplash.jpg?w=560&format=webp&quality=82'
+
 /* UI decorations */
 export { default as starIcon } from './star.png?w=128&format=webp&quality=85'
 export { default as star2 } from './star2.png?w=160&format=webp&quality=85'

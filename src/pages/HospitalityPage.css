@@ -94,6 +94,32 @@
   color: inherit !important;
 }
 
+.hosp-hero__closer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 1.15rem 0 0;
+  color: var(--mm-white);
+}
+
+.hosp-hero__closer-line {
+  display: block;
+  width: 2.25rem;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.hosp-hero__closer em {
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--mm-white);
+}
+
 .hosp-hero__starburst {
   position: absolute;
   bottom: 2rem;
@@ -224,92 +250,120 @@
 }
 
 .hosp-flagship {
-  background: var(--mm-blue);
+  background: var(--cream-light);
   padding: 3.5rem 0;
-  color: var(--white);
   overflow: hidden;
 }
 
-.hosp-flagship__header {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+.hosp-flagship__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.75fr);
+  gap: 2.5rem 3.5rem;
+  align-items: center;
 }
 
-.hosp-flagship__heading-group {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+.hosp-flagship__copy {
+  position: relative;
+  padding-left: 1.35rem;
+  border-left: 3px solid var(--mm-coral-alt);
   min-width: 0;
 }
 
-.hosp-flagship__number {
-  font-size: clamp(3.5rem, 7vw, 6rem);
-  font-weight: 800;
-  line-height: 1;
-}
-
 .hosp-flagship__title {
-  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  font-family: var(--font-apparat);
+  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  color: var(--mm-blue);
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+  max-width: 38rem;
 }
 
-.hosp-flagship__book-icon {
-  width: 50px;
-  height: 50px;
-  border: 1.5px solid var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.75rem;
-  flex-shrink: 0;
+.hosp-flagship__intro {
+  font-family: var(--font-apparat);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-body, #3a3a3a);
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
 }
 
-.hosp-flagship__book-icon svg {
-  width: 26px;
-  height: 26px;
+.hosp-flagship__headline {
+  font-family: var(--font-apparat);
+  font-size: clamp(1.1rem, 1.9vw, 1.4rem);
+  font-weight: 700;
+  color: var(--mm-blue);
+  line-height: 1.35;
+  margin: 0 0 1rem;
 }
 
-.hosp-flagship__content {
-  position: relative;
-  min-height: 300px;
-  margin-bottom: 2rem;
+.hosp-flagship__headline em {
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--mm-coral-alt);
 }
 
-.hosp-flagship__orange-box {
-  position: relative;
-  z-index: 2;
-  background: var(--mm-coral-alt);
-  padding: 2rem 2.25rem;
-  max-width: 52%;
-  border-radius: 51px 0 51px 0;
-  box-sizing: border-box;
+.hosp-flagship__body {
+  font-family: var(--font-apparat);
+  font-size: 0.9rem;
+  line-height: 1.72;
+  color: var(--text-body, #3a3a3a);
+  max-width: 38rem;
 }
 
-.hosp-flagship__orange-box p {
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.55;
-  color: var(--white);
+.hosp-flagship__body p {
   margin: 0;
 }
 
-.hosp-flagship__orange-box .CharOverride-21 {
-  font-size: inherit !important;
-  line-height: inherit !important;
-  color: inherit !important;
+.hosp-flagship__body p + p {
+  margin-top: 0.85rem;
 }
 
-.hosp-flagship__peach-circle {
+.hosp-flagship__highlight {
+  font-weight: 700;
+  color: var(--mm-blue);
+}
+
+.hosp-flagship__contact {
+  margin-top: 1.15rem !important;
+  font-size: 0.88rem;
+}
+
+.hosp-flagship__contact a {
+  color: var(--mm-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hosp-flagship__contact a:hover {
+  opacity: 0.85;
+}
+
+.hosp-flagship__buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.hosp-flagship__buttons .btn-pill {
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
+
+.hosp-flagship__portrait {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+}
+
+.hosp-flagship__portrait-glow {
   position: absolute;
-  right: 18%;
-  top: 5%;
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -318,14 +372,13 @@
 }
 
 .hosp-flagship__person-wrap {
-  position: absolute;
-  right: 12%;
-  top: 0;
+  position: relative;
   width: 220px;
   height: 220px;
   border-radius: 50%;
   overflow: hidden;
-  z-index: 3;
+  z-index: 2;
+  box-shadow: 0 12px 32px rgba(30, 75, 189, 0.12);
 }
 
 .hosp-flagship__person {
@@ -335,30 +388,11 @@
   object-position: top center;
 }
 
-.hosp-flagship__buttons {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.hosp-flagship__buttons .btn-pill {
-  color: var(--white);
-  border-color: var(--white);
-  white-space: normal;
-  text-align: center;
-  max-width: 100%;
-}
-
-.hosp-flagship__buttons .btn-pill .CharOverride-25 {
-  color: var(--white);
-  white-space: normal;
-}
-
 .hosp-gallery {
   padding: 0 0 3rem;
-  background: var(--cream-light);
+  background: var(--white);
   content-visibility: auto;
-  contain-intrinsic-size: auto 600px;
+  contain-intrinsic-size: auto 280px;
 }
 
 .hosp-gallery__grid {
@@ -379,44 +413,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.hosp-flagship__custom-title {
-  font-size: clamp(1.05rem, 1.9vw, 1.35rem);
-  line-height: 1.35;
-  font-weight: 700;
-  margin-top: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: var(--white);
-}
-
-.hosp-flagship__custom-body {
-  font-size: 0.9rem;
-  line-height: 1.72;
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.hosp-flagship__custom-body + .hosp-flagship__custom-body {
-  margin-top: 0.65rem;
-}
-
-.hosp-flagship__custom-contact {
-  margin-top: 0.95rem;
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.92);
-  overflow-wrap: anywhere;
-}
-
-.hosp-flagship__custom-link {
-  color: var(--white);
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.hosp-flagship__custom-link:hover {
-  opacity: 0.85;
 }
 
 /* —— Tablet & below: stack hero, reflow flagship —— */
@@ -460,37 +456,17 @@
     max-width: none;
   }
 
-  .hosp-flagship__content {
-    display: grid;
+  .hosp-flagship__layout {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      'portrait'
-      'copy';
-    justify-items: center;
-    gap: 1.35rem;
+    gap: 2rem;
+  }
+
+  .hosp-flagship__portrait {
+    order: -1;
     min-height: auto;
-    margin-bottom: 1.75rem;
   }
 
-  .hosp-flagship__orange-box {
-    grid-area: copy;
-    max-width: 100%;
-    width: 100%;
-    padding: 1.75rem 1.65rem;
-  }
-
-  .hosp-flagship__peach-circle,
-  .hosp-flagship__person-wrap {
-    grid-area: portrait;
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .hosp-flagship__peach-circle {
+  .hosp-flagship__portrait-glow {
     width: 200px;
     height: 200px;
   }
@@ -528,20 +504,28 @@
     padding: 2.75rem 0;
   }
 
-  .hosp-flagship__header {
-    gap: 1rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .hosp-flagship__number {
-    font-size: clamp(2.75rem, 12vw, 4rem);
+  .hosp-flagship__copy {
+    padding-left: 1.1rem;
   }
 
   .hosp-flagship__title {
-    font-size: clamp(0.72rem, 2.2vw, 0.9rem);
+    font-size: clamp(1.1rem, 3.2vw, 1.4rem);
   }
 
-  .hosp-flagship__peach-circle {
+  .hosp-flagship__intro {
+    font-size: 0.88rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .hosp-flagship__headline {
+    font-size: clamp(1.05rem, 3.2vw, 1.35rem);
+  }
+
+  .hosp-flagship__body {
+    font-size: 0.875rem;
+  }
+
+  .hosp-flagship__portrait-glow {
     width: 180px;
     height: 180px;
   }
@@ -556,7 +540,6 @@
   }
 
   .hosp-gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 0.65rem;
   }
 
@@ -593,6 +576,15 @@
   .hosp-hero__subtext {
     font-size: 0.78rem;
     line-height: 1.6;
+  }
+
+  .hosp-hero__closer {
+    margin-top: 1rem;
+    gap: 0.55rem;
+  }
+
+  .hosp-hero__closer em {
+    font-size: clamp(0.92rem, 4.2vw, 1.05rem);
   }
 
   .hosp-hero__starburst {
@@ -670,47 +662,30 @@
     padding: 2.25rem 0;
   }
 
-  .hosp-flagship__number {
-    font-size: clamp(2.5rem, 14vw, 3.25rem);
+  .hosp-flagship__copy {
+    padding-left: 0.95rem;
   }
 
-  .hosp-flagship__book-icon {
-    width: 42px;
-    height: 42px;
-    margin-top: 0.35rem;
+  .hosp-flagship__title {
+    font-size: clamp(1.05rem, 4.8vw, 1.25rem);
+    margin-bottom: 0.6rem;
   }
 
-  .hosp-flagship__book-icon svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .hosp-flagship__content {
-    gap: 1.15rem;
-    margin-bottom: 1.35rem;
-  }
-
-  .hosp-flagship__orange-box {
-    padding: 1.35rem 1.15rem 1.45rem;
-    border-radius: 36px 0 36px 0;
-  }
-
-  .hosp-flagship__orange-box p {
-    font-size: 0.92rem;
-    line-height: 1.5;
-  }
-
-  .hosp-flagship__custom-title {
-    font-size: clamp(0.98rem, 4.2vw, 1.1rem);
-    margin-top: 1rem;
-  }
-
-  .hosp-flagship__custom-body,
-  .hosp-flagship__custom-contact {
+  .hosp-flagship__intro {
     font-size: 0.84rem;
+    margin-bottom: 1.25rem;
   }
 
-  .hosp-flagship__peach-circle {
+  .hosp-flagship__headline {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+  }
+
+  .hosp-flagship__body {
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .hosp-flagship__portrait-glow {
     width: 150px;
     height: 150px;
   }
@@ -723,6 +698,7 @@
   .hosp-flagship__buttons {
     flex-direction: column;
     align-items: stretch;
+    margin-top: 1.4rem;
   }
 
   .hosp-flagship__buttons .btn-pill {
@@ -735,7 +711,6 @@
   }
 
   .hosp-gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
 
@@ -763,11 +738,7 @@
     gap: 1.15rem;
   }
 
-  .hosp-flagship__orange-box {
-    padding: 1.2rem 1rem 1.3rem;
-  }
-
-  .hosp-flagship__peach-circle {
+  .hosp-flagship__portrait-glow {
     width: 132px;
     height: 132px;
   }

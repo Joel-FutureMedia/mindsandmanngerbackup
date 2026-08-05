@@ -6,7 +6,7 @@ import { arrowIcon } from '../assets/siteImages'
 import './Header.css'
 
 interface HeaderProps {
-  activeLink?: 'home' | 'hospitality' | 'service' | 'youth' | 'approach' | 'impact'
+  activeLink?: 'home' | 'hospitality' | 'service' | 'youth' | 'approach' | 'impact' | 'team'
   ctaStyle?: 'gold' | 'outline'
 }
 
@@ -52,6 +52,7 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
   const isYouth = activeLink === 'youth' || location.pathname === '/school-youth'
   const isApproach = activeLink === 'approach' || location.pathname === '/approach'
   const isImpact = activeLink === 'impact' || location.pathname === '/impact'
+  const isTeam = activeLink === 'team' || location.pathname === '/team'
   const isHome = activeLink === 'home' || (!activeLink && location.pathname === '/')
 
   const closeMenu = () => setMenuOpen(false)
@@ -132,9 +133,9 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
                 />
               </div>
             </div>
-            <SectionLink to="/#about" onNavigate={closeMenu}>
-              About
-            </SectionLink>
+            <NavLink to="/team" coral={isTeam} onNavigate={closeMenu}>
+              Team
+            </NavLink>
             <SectionLink to="/#contact" onNavigate={closeMenu}>
               Contact
             </SectionLink>
@@ -161,9 +162,9 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
             <NavLink to="/impact" coral={isImpact} onNavigate={closeMenu}>
               Impact
             </NavLink>
-            <SectionLink to="/#about" onNavigate={closeMenu}>
-              About
-            </SectionLink>
+            <NavLink to="/team" coral={isTeam} onNavigate={closeMenu}>
+              Team
+            </NavLink>
             <SectionLink to="/#contact" onNavigate={closeMenu}>
               Contact
             </SectionLink>

@@ -291,7 +291,7 @@ export default function HomePage() {
 
       <section className="section section--what" id="about">
         <div className="container">
-          <SectionHeading number="01" title="What Minds & Manners Is" />
+          <SectionHeading number="01" title="What is Minds & Manners?" />
           <div className="what__grid">
             <div className="what__col">
               <p className="ParaOverride-4">
