@@ -78,33 +78,34 @@ export default function ApproachPage() {
       <Header activeLink="approach" ctaStyle="outline" />
 
       <section className="approach-hero">
-        <div className="container approach-hero__grid">
-          <div className="approach-hero__copy">
-            <p className="approach-hero__eyebrow">Our Approach</p>
-            <h1 className="approach-hero__title">
-              How We <em>Create Change</em>
-            </h1>
-            <p className="approach-hero__lead">
-              We start where conventional training stops.
-            </p>
-            <p className="approach-hero__text">
-              We focus not on what to do, but on <strong>who is doing it</strong> — and how their mindset, emotional intelligence, and personal presence shape every interaction.
-            </p>
-          </div>
-          <div className="approach-hero__media">
-            <SiteImage
-              src={generalCuratedMk}
-              alt="Professional reflecting on human-centred service"
-              className="approach-hero__image"
-              priority
-            />
-            <span className="approach-hero__shape" aria-hidden="true" />
+        <div className="approach-hero__shell">
+          <div className="container approach-hero__grid">
+            <div className="approach-hero__copy">
+              <p className="approach-hero__eyebrow">Our Approach</p>
+              <h1 className="approach-hero__title">
+                How We <em>Create Change</em>
+              </h1>
+              <p className="approach-hero__lead">
+                We start where conventional training stops.
+              </p>
+              <p className="approach-hero__text">
+                We focus not on what to do, but on <strong>who is doing it</strong> — and how their mindset, emotional intelligence, and personal presence shape every interaction.
+              </p>
+            </div>
+            <div className="approach-hero__media">
+              <SiteImage
+                src={generalCuratedMk}
+                alt="Professional reflecting on human-centred service"
+                className="approach-hero__image"
+                priority
+              />
+            </div>
           </div>
         </div>
-      </section>
-
-      <section className="approach-pano" aria-hidden="true">
-        <img src={panoChatGpt} alt="" className="approach-pano__image" loading="lazy" decoding="async" />
+        <div className="approach-hero__band" aria-hidden="true">
+          <img src={panoChatGpt} alt="" className="approach-hero__band-image" loading="lazy" decoding="async" />
+          <span className="approach-hero__band-wash" />
+        </div>
       </section>
 
       <section className="approach-philosophy">

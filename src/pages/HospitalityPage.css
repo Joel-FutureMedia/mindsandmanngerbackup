@@ -138,12 +138,12 @@
   margin-bottom: 0;
   padding: 0;
   border: none;
-}
-
-.hosp-hero__quote .CharOverride-17 {
-  font-size: clamp(1.15rem, 2.4vw, 1.75rem) !important;
-  line-height: 1.35 !important;
-  display: block;
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.5vw, 1.85rem);
+  line-height: 1.35;
+  color: var(--mm-blue);
 }
 
 .hosp-programmes {
@@ -594,11 +594,8 @@
 
   .hosp-hero__quote {
     margin-top: 0.85rem;
-  }
-
-  .hosp-hero__quote .CharOverride-17 {
-    font-size: clamp(1.05rem, 5.2vw, 1.35rem) !important;
-    line-height: 1.32 !important;
+    font-size: clamp(1.1rem, 5.2vw, 1.4rem);
+    line-height: 1.32;
   }
 
   .hosp-programmes {

@@ -99,7 +99,7 @@ export default function HospitalityPage() {
               </span>
             </div>
             <blockquote className="hosp-hero__quote">
-              <span className="CharOverride-17">&ldquo;When your staff own their story, they become the most authentic thing about your business.&rdquo;</span>
+              &ldquo;When your staff own their story, they become the most authentic thing about your business.&rdquo;
             </blockquote>
           </div>
         </div>

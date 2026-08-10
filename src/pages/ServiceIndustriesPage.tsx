@@ -183,38 +183,38 @@ export default function ServiceIndustriesPage() {
 
       <section className="service-flagship">
         <div className="container">
-          <div className="service-flagship__header">
-            <div className="service-flagship__heading-group">
-              <span className="service-flagship__number CharOverride-1">02</span>
-              <span className="service-flagship__title CharOverride-13">Our Flagship</span>
-            </div>
-            <div className="service-flagship__book-icon">
-              <svg viewBox="0 0 48 48" fill="none">
-                <rect x="10" y="8" width="28" height="32" rx="2" stroke="white" strokeWidth="1.5" />
-                <path d="M24 8v32" stroke="white" strokeWidth="1.5" />
-                <path d="M16 2l4 6M32 2l-4 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
-            </div>
-          </div>
+          <div className="service-flagship__layout">
+            <div className="service-flagship__copy">
+              <div className="service-flagship__heading-group">
+                <span className="service-flagship__number">02</span>
+                <span className="service-flagship__title">Our Flagship</span>
+              </div>
 
-          <div className="service-flagship__content">
-            <div className="service-flagship__orange-box _idGenObjectStyleOverride-10">
-              <p className="ParaOverride-4">
-                <span className="CharOverride-21">
-                  The Minds &amp; Manners Service Excellence Masterclass &ndash; practical, engaging, built for frontline teams.
-                </span>
-              </p>
-            </div>
-            <div className="service-flagship__peach-circle _idGenObjectStyleOverride-7" />
-            <div className="service-flagship__person-wrap">
-              <SiteImage src={serviceFlagshipImg} alt="Service professional" className="service-flagship__person" loading="lazy" />
-            </div>
-          </div>
+              <div className="service-flagship__masterclass">
+                <p className="service-flagship__label">Service Excellence Masterclass</p>
+                <p className="service-flagship__lead">
+                  The Minds &amp; Manners Service Excellence Masterclass — practical, engaging, built for frontline teams.
+                </p>
+              </div>
 
-          <div className="service-flagship__buttons">
-            <button type="button" className="btn-pill btn-pill--white mm-border-gold-pill">
-              <span className="CharOverride-25">View Service Profile</span>
-            </button>
+              <div className="service-flagship__buttons">
+                <button type="button" className="btn-pill btn-pill--white mm-border-gold-pill">
+                  <span className="CharOverride-25">View Service Profile</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="service-flagship__portrait">
+              <div className="service-flagship__portrait-glow" aria-hidden="true" />
+              <div className="service-flagship__person-wrap">
+                <SiteImage
+                  src={serviceFlagshipImg}
+                  alt="Service professional"
+                  className="service-flagship__person"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

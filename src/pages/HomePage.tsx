@@ -6,18 +6,9 @@ import SectionHeading from '../components/SectionHeading'
 import HeroSlider from '../components/HeroSlider'
 import { ArrowDown, Squiggle } from '../components/Doodles'
 import {
-  anotherShape,
   arrowone,
-  blueShape,
-  generalArturo,
-  generalBaptista,
   generalChatGpt,
-  generalChristian,
-  generalGettyKt,
-  generalJack,
-  generalSincerely,
   generalTwoHMedia,
-  generalVitaly,
   panoDdQqD,
   star2,
   starIcon,
@@ -80,74 +71,61 @@ const methodologyItems = [
   },
 ]
 
-const statSurfaceClass: Record<string, string> = {
-  salmon: 'mm-stat-peach _idGenObjectStyleOverride-7',
-  yellow: 'mm-stat-gold _idGenObjectStyleOverride-11',
-  beige: 'mm-stat-cream _idGenObjectStyleOverride-1',
-  blue: 'mm-stat-blue _idGenObjectStyleOverride-3',
-}
-
 const stats = [
   {
     value: '21%',
-    bg: 'salmon',
-    lines: [
-      'Higher profitability is linked',
-      'to highly engaged teams and',
-      'positive workplace cultures.',
-    ],
+    tone: 'peach',
+    title: 'Higher profitability',
+    description: 'Linked to highly engaged teams and positive workplace cultures.',
   },
   {
     value: '70%',
-    bg: 'yellow',
-    lines: [
-      'Team engagement is largely',
-      'shaped by leadership and',
-      'workplace culture.',
-      '(Gallup)',
-    ],
+    tone: 'gold',
+    title: 'Leadership & culture',
+    description: 'Team engagement is largely shaped by leadership and workplace culture.',
+    source: 'Gallup',
   },
   {
     value: '86%',
-    bg: 'beige',
-    lines: [
-      'Customers are willing to pay',
-      'more for a better customer',
-      'experience.',
-    ],
+    tone: 'cream',
+    title: 'Experience premium',
+    description: 'Customers are willing to pay more for a better customer experience.',
   },
   {
     value: '90%',
-    bg: 'blue',
-    lines: [
-      'Top performers consistently',
-      'demonstrate strong emotional',
-      'intelligence.',
-    ],
+    tone: 'blue',
+    title: 'Emotional intelligence',
+    description: 'Top performers consistently demonstrate strong emotional intelligence.',
   },
 ]
 
 const testimonials = [
   {
-    image: generalArturo,
+    name: 'Amanda Roux',
+    company: 'Luxury Lodge, Greater Kruger',
     quote: "This training didn't just improve service - it changed how our team sees themselves.",
   },
   {
-    image: generalBaptista,
+    name: 'Johan van Wyk',
+    company: 'Hospitality Group, Cape Town',
     quote: 'Our staff are more confident, more engaged, and more aligned with what we stand for.',
   },
   {
-    image: generalChristian,
+    name: 'Naledi Molefe',
+    company: 'Tourism Operator, Namibia',
     quote: "We've done training before. This was the first time it actually stuck.",
   },
 ]
 
-const momentsGallery = [
-  { src: generalGettyKt, alt: 'Team collaborating in the workplace' },
-  { src: generalJack, alt: 'Professional connecting with colleagues' },
-  { src: generalSincerely, alt: 'Warm workplace interaction' },
-  { src: generalVitaly, alt: 'Engaged service professional' },
-]
+function getInitials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase()
+}
 
 const audienceOfferings = [
   {
@@ -397,50 +375,36 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="audiences__relevance-intro">
-            <h3 className="audiences__relevance-heading">
-              <span className="CharOverride-13">Relevance</span>
+          <div className="audiences__relevance">
+            <p className="audiences__relevance-label">Relevance</p>
+            <h3 className="audiences__relevance-lead">
+              If your team is human, we&apos;re for you.
             </h3>
-            <p className="audiences__relevance-lead ParaOverride-4">
-              <span className="CharOverride-11">
-                If your team is human, we&apos;re for you. Service is a feeling. And feelings come from people.
-              </span>
+            <p className="audiences__relevance-sub">
+              Service is a feeling. <em>And feelings come from people.</em>
             </p>
           </div>
 
           <div className="audiences__grid">
             <div className="audiences__cards">
-              <Link to="/hospitality" className="audiences__card audiences__card--blue">
-                <div className="audiences__card-surface">
-                  <img src={blueShape} alt="" className="audiences__shape" aria-hidden="true" loading="lazy" decoding="async" />
-                  <div className="audiences__card-text audiences__card-text--blue-shaped">
-                    <span className="audiences__shape-line audiences__shape-line--b1 CharOverride-21">Whether you welcome</span>
-                    <span className="audiences__shape-line audiences__shape-line--b2 CharOverride-21">guests at a lodge or serve</span>
-                    <span className="audiences__shape-line audiences__shape-line--b3 CharOverride-21">customers on the phone, as</span>
-                    <span className="audiences__shape-line audiences__shape-line--b4 CharOverride-21">a cashier, on the floor or in</span>
-                    <span className="audiences__shape-line audiences__shape-line--b5 CharOverride-21">a boardroom, your people</span>
-                    <span className="audiences__shape-line audiences__shape-line--b6 CharOverride-21">are your biggest asset - and</span>
-                    <span className="audiences__shape-line audiences__shape-line--b7 CharOverride-21">your biggest risk.</span>
-                  </div>
+              <Link to="/hospitality" className="audiences__panel audiences__panel--blue">
+                <svg className="audiences__panel-shape" viewBox="0 0 360 300" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M0 0 H250 C320 0 360 40 360 110 V300 H95 C30 300 0 255 0 185 Z" />
+                </svg>
+                <div className="audiences__panel-body">
+                  <p className="audiences__panel-text">
+                    Whether you welcome guests at a lodge or serve customers on the phone, as a cashier, on the floor or in a boardroom, your people are your biggest asset — and your biggest risk.
+                  </p>
                 </div>
               </Link>
-              <Link to="/service" className="audiences__card audiences__card--coral">
-                <div className="audiences__card-surface">
-                  <img src={anotherShape} alt="" className="audiences__shape" aria-hidden="true" loading="lazy" decoding="async" />
-                  <div className="audiences__card-text audiences__card-text--coral-shaped">
-                    <span className="audiences__shape-line audiences__shape-line--c1 CharOverride-21">Technical training</span>
-                    <span className="audiences__shape-line audiences__shape-line--c2 CharOverride-21">teaches what to do.</span>
-                    <span className="audiences__shape-line audiences__shape-line--c3 CharOverride-21">
-                      We focus on <strong>who is</strong>
-                    </span>
-                    <span className="audiences__shape-line audiences__shape-line--c4 CharOverride-21">
-                      <strong>doing it</strong> - the mindset,
-                    </span>
-                    <span className="audiences__shape-line audiences__shape-line--c5 CharOverride-21">emotional intelligence,</span>
-                    <span className="audiences__shape-line audiences__shape-line--c6 CharOverride-21">and personal presence</span>
-                    <span className="audiences__shape-line audiences__shape-line--c7 CharOverride-21">that turn transactions into</span>
-                    <span className="audiences__shape-line audiences__shape-line--c8 CharOverride-21">connections.</span>
-                  </div>
+              <Link to="/service" className="audiences__panel audiences__panel--coral">
+                <svg className="audiences__panel-shape" viewBox="0 0 360 300" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M24 0 H336 C350 0 360 10 360 24 V170 C360 250 300 300 210 300 H24 C10 300 0 290 0 276 V24 C0 10 10 0 24 0 Z" />
+                </svg>
+                <div className="audiences__panel-body">
+                  <p className="audiences__panel-text">
+                    Technical training teaches what to do. We focus on <strong>who is doing it</strong> — the mindset, emotional intelligence, and personal presence that turn transactions into connections.
+                  </p>
                 </div>
               </Link>
             </div>
@@ -450,26 +414,21 @@ export default function HomePage() {
                   <Link to={offering.to} className="btn-pill btn-pill--blue mm-border-blue-pill audiences__pill">
                     <span className="CharOverride-16">{offering.title}</span>
                   </Link>
-                  <p className="audiences__button-desc">
-                    <span className="CharOverride-6">{offering.description}</span>
-                  </p>
+                  <p className="audiences__button-desc">{offering.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <blockquote className="audiences__quote">
-            <span className="CharOverride-10 audiences__quote-line">
-              &ldquo;Clients may not remember what you said or did,
-            </span>
-            <span className="CharOverride-10 audiences__quote-line">
-              but they will remember how you made them feel.&rdquo;
-            </span>
+            <p>
+              &ldquo;Clients may not remember what you said or did, but they will remember how you made them feel.&rdquo;
+            </p>
           </blockquote>
         </div>
       </section>
 
-      <section className="section section--work-with">
+      <section className="section section--work-with" id="who-we-work-with">
         <div className="container">
           <SectionHeading number="03" title="Who We Work With" />
           <div className="work-with__layout">
@@ -565,33 +524,23 @@ export default function HomePage() {
               </DiscoveryCallButton>
             </div>
           </div>
+
           <blockquote className="numbers__intro">
-            <span className="CharOverride-11">
+            <p>
               &ldquo;In a world where products, technology and facilities can be copied, people increasingly choose based on human connection. Your greatest competitive advantage — and your greatest risk — is your people.&rdquo;
-            </span>
+            </p>
           </blockquote>
-          <div className="numbers__cards">
+
+          <div className="numbers__grid">
             {stats.map((stat) => (
-              <div key={stat.value} className={`numbers__card numbers__card--${stat.bg} ${statSurfaceClass[stat.bg]}`}>
-                <span className={`numbers__value CharOverride-17 ${stat.bg === 'blue' ? 'CharOverride-27' : ''}`}>
-                  {stat.value}
-                </span>
-                <p className={`numbers__desc ${stat.bg === 'blue' ? '' : ''}`}>
-                  <span className={stat.bg === 'blue' ? 'CharOverride-21' : 'CharOverride-11'}>
-                    {stat.lines.map((line) => (
-                      <span key={line} className="numbers__desc-line">
-                        {line}
-                        <br />
-                      </span>
-                    ))}
-                  </span>
-                </p>
-                {stat.bg === 'blue' && (
-                  <span className="numbers__card-star">
-                    <img src={starIcon} alt="" className="numbers__card-star-img mm-star-animate" aria-hidden="true" loading="lazy" decoding="async" />
-                  </span>
-                )}
-              </div>
+              <article key={stat.value} className={`numbers__stat numbers__stat--${stat.tone}`}>
+                <div className="numbers__stat-top">
+                  <span className="numbers__value">{stat.value}</span>
+                  {stat.source ? <span className="numbers__source">{stat.source}</span> : null}
+                </div>
+                <h3 className="numbers__title">{stat.title}</h3>
+                <p className="numbers__desc">{stat.description}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -600,27 +549,33 @@ export default function HomePage() {
       <section className="section section--changes">
         <div className="container">
           <SectionHeading number="06" title="What Changes" />
-          <p className="changes__intro ParaOverride-4">
-            <span className="CharOverride-11">What shifts when your team works with us:</span>
-          </p>
-          <div className="changes__table" role="table" aria-label="Before and after working with Minds and Manners">
-            <div className="changes__row changes__row--head" role="row">
-              <div className="changes__cell changes__cell--before" role="columnheader">
-                <span className="CharOverride-13">Before</span>
-              </div>
-              <div className="changes__cell changes__cell--after" role="columnheader">
-                <span className="CharOverride-13">After</span>
-              </div>
-            </div>
-            {changesRows.map((row) => (
-              <div key={row.before} className="changes__row" role="row">
-                <div className="changes__cell changes__cell--before" role="cell">
-                  <span className="CharOverride-11">{row.before}</span>
+          <p className="changes__intro">What shifts when your team works with us:</p>
+
+          <div className="changes__legend" aria-hidden="true">
+            <span className="changes__legend-item changes__legend-item--before">Before</span>
+            <span className="changes__legend-arrow" />
+            <span className="changes__legend-item changes__legend-item--after">After</span>
+          </div>
+
+          <div className="changes__list" aria-label="Before and after working with Minds and Manners">
+            {changesRows.map((row, index) => (
+              <article key={row.before} className="changes__item">
+                <div className="changes__side changes__side--before">
+                  <span className="changes__label">Before</span>
+                  <p className="changes__text">{row.before}</p>
                 </div>
-                <div className="changes__cell changes__cell--after" role="cell">
-                  <span className="CharOverride-11">{row.after}</span>
+                <div className="changes__connector" aria-hidden="true">
+                  <span className="changes__connector-line" />
+                  <span className="changes__connector-arrow" />
                 </div>
-              </div>
+                <div className="changes__side changes__side--after">
+                  <span className="changes__label">After</span>
+                  <p className="changes__text">{row.after}</p>
+                </div>
+                <span className="changes__index" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+              </article>
             ))}
           </div>
         </div>
@@ -640,10 +595,8 @@ export default function HomePage() {
                 Exceptional service, strong teams, loyal customers, and thriving organisations are built on the same foundation: emotionally intelligent people who communicate well, make others feel valued, and understand the impact of every interaction.
               </span>
             </p>
-            <p className="why-matters__closing ParaOverride-4">
-              <span className="CharOverride-11">
-                At Minds &amp; Manners, we help organisations develop exactly those skills.
-              </span>
+            <p className="why-matters__closing">
+              At Minds &amp; Manners, we help organisations develop exactly those skills.
             </p>
           </div>
           <div className="why-matters__highlight">
@@ -665,18 +618,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--moments" aria-label="Moments from our work">
-        <div className="container">
-          <div className="moments-gallery">
-            {momentsGallery.map((item) => (
-              <div key={item.src} className="moments-gallery__item">
-                <img src={item.src} alt={item.alt} loading="lazy" decoding="async" width={520} height={390} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section section--testimonials">
         <div className="container">
           <SectionHeading number="08" title="Testimonials">
@@ -686,14 +627,18 @@ export default function HomePage() {
           </SectionHeading>
           <div className="testimonials__grid">
             {testimonials.map((t) => (
-              <div key={t.quote} className="testimonials__item">
-                <div className="testimonials__avatar">
-                  <img src={t.image} alt="" loading="lazy" decoding="async" />
+              <figure key={t.quote} className="testimonials__item">
+                <figcaption className="testimonials__meta">
+                  <span className="testimonials__name">{t.name}</span>
+                  <span className="testimonials__company">{t.company}</span>
+                </figcaption>
+                <div className="testimonials__avatar" aria-hidden="true">
+                  {getInitials(t.name)}
                 </div>
                 <blockquote className="testimonials__quote">
-                  <span className="CharOverride-6">&ldquo;{t.quote}&rdquo;</span>
+                  &ldquo;{t.quote}&rdquo;
                 </blockquote>
-              </div>
+              </figure>
             ))}
           </div>
         </div>

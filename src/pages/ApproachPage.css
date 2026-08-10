@@ -5,113 +5,138 @@
   max-width: 100%;
 }
 
-/* Hero — split editorial layout (distinct from overlay-card heroes) */
+/* Hero — muted blue-sand field, no white fill */
 .approach-hero {
-  padding: 2.5rem 0 3.5rem;
-  background: var(--white);
-  border-bottom: 1px solid rgba(30, 75, 189, 0.08);
+  --approach-hero-sand: #e7e1da;
+  --approach-hero-mist: #d5deee;
+  --approach-hero-ink: #1a3a8f;
+  padding: 0;
+  background:
+    radial-gradient(ellipse 70% 80% at 12% 20%, rgba(213, 222, 238, 0.95) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 60% at 88% 70%, rgba(252, 222, 214, 0.45) 0%, transparent 55%),
+    linear-gradient(160deg, var(--approach-hero-mist) 0%, var(--approach-hero-sand) 48%, #e4ddd4 100%);
+}
+
+.approach-hero__shell {
+  padding: 2rem 0 0;
 }
 
 .approach-hero__grid {
   display: grid;
-  grid-template-columns: 1fr min(42%, 480px);
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 1.5rem 2rem;
+  align-items: stretch;
+  padding-bottom: 1.75rem;
+}
+
+.approach-hero__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.35rem 1.5rem 1.5rem 0;
+  border-left: 3px solid rgba(32, 80, 208, 0.35);
+  padding-left: 1.35rem;
 }
 
 .approach-hero__eyebrow {
   font-family: var(--font-apparat);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--mm-coral);
-  margin-bottom: 0.75rem;
+  color: var(--approach-hero-ink);
+  opacity: 0.72;
+  margin: 0 0 0.65rem;
 }
 
 .approach-hero__title {
   font-family: var(--font-apparat);
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-size: clamp(1.9rem, 4.2vw, 2.95rem);
   font-weight: 800;
-  line-height: 1.1;
-  color: var(--mm-blue);
-  margin-bottom: 1.25rem;
+  line-height: 1.06;
+  color: var(--approach-hero-ink);
+  margin: 0 0 1rem;
 }
 
 .approach-hero__title em {
   font-family: var(--font-lipsum);
   font-style: italic;
   font-weight: 500;
-  color: var(--mm-coral-alt);
+  color: #b85a42;
 }
 
 .approach-hero__lead {
-  font-family: var(--font-apparat);
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  font-weight: 700;
-  color: var(--text-body, #3a3a3a);
-  margin-bottom: 0.85rem;
-  line-height: 1.4;
+  font-family: var(--font-lipsum);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.1vw, 1.55rem);
+  color: var(--approach-hero-ink);
+  margin: 0 0 0.9rem;
+  line-height: 1.32;
+  max-width: 22rem;
 }
 
 .approach-hero__text {
   font-family: var(--font-apparat);
   font-size: 0.92rem;
-  line-height: 1.72;
-  color: var(--text-muted);
-  max-width: 520px;
+  line-height: 1.68;
+  color: #3d4658;
+  max-width: 34rem;
+  margin: 0;
 }
 
 .approach-hero__text strong {
-  color: var(--mm-blue);
+  color: var(--approach-hero-ink);
   font-weight: 700;
 }
 
 .approach-hero__media {
   position: relative;
-  overflow: hidden;
   min-width: 0;
+  align-self: stretch;
 }
 
 .approach-hero__image {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
+  min-height: clamp(240px, 32vw, 340px);
   object-fit: cover;
-  border-radius: 2rem 0 2rem 0;
+  border-radius: 0;
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
   display: block;
+}
+
+.approach-hero__band {
   position: relative;
-  z-index: 1;
-}
-
-.approach-hero__shape {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: 45%;
-  background: var(--mm-blue);
-  border-radius: 0 2rem 0 2rem;
-  z-index: 0;
-  opacity: 0.12;
-}
-
-.approach-pano {
   width: 100%;
-  max-height: 280px;
   overflow: hidden;
+  line-height: 0;
 }
 
-.approach-pano__image {
+.approach-hero__band-image {
   width: 100%;
-  height: clamp(160px, 28vw, 280px);
+  height: clamp(150px, 24vw, 230px);
   object-fit: cover;
-  object-position: center;
+  object-position: center 40%;
   display: block;
+  filter: saturate(0.82) contrast(1.02);
+}
+
+.approach-hero__band-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(213, 222, 238, 0.55) 0%,
+    rgba(231, 225, 218, 0.18) 45%,
+    rgba(252, 222, 214, 0.28) 100%
+  );
+  pointer-events: none;
 }
 
 /* Philosophy */
 .approach-philosophy {
-  padding: 3.5rem 0;
+  padding: 2.75rem 0 3.25rem;
   background: var(--cream-light);
 }
 
@@ -119,7 +144,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 2rem 3rem;
+  gap: 1.5rem 2.5rem;
   align-items: start;
 }
 
@@ -128,20 +153,20 @@
   grid-row: 1 / 3;
   font-family: var(--font-lipsum);
   font-style: italic;
-  font-size: clamp(1.15rem, 2vw, 1.55rem);
-  line-height: 1.55;
+  font-size: clamp(1.1rem, 1.9vw, 1.45rem);
+  line-height: 1.5;
   color: var(--mm-blue);
   margin: 0;
-  padding: 2rem 0 2rem 1.75rem;
-  border-left: 4px solid var(--mm-coral);
+  padding: 0.35rem 0 0.35rem 1.35rem;
+  border-left: 3px solid var(--mm-coral);
 }
 
 .approach-philosophy__body {
   grid-column: 2;
   grid-row: 1;
   font-family: var(--font-apparat);
-  font-size: 0.92rem;
-  line-height: 1.72;
+  font-size: 0.9rem;
+  line-height: 1.68;
   color: var(--text-body, #3a3a3a);
 }
 
@@ -152,15 +177,15 @@
 
 .approach-philosophy__image {
   width: 100%;
-  height: clamp(200px, 28vw, 280px);
+  height: clamp(180px, 24vw, 240px);
   object-fit: cover;
-  border-radius: 0 1.5rem 0 1.5rem;
+  border-radius: 0 1.35rem 0 1.35rem;
   display: block;
 }
 
 /* Methodology */
 .approach-methodology {
-  padding: 3.5rem 0;
+  padding: 3.25rem 0;
   background: var(--mm-blue);
   color: var(--white);
 }
@@ -171,7 +196,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   opacity: 0.85;
 }
 
@@ -187,7 +212,7 @@
 .approach-methodology__item {
   display: flex;
   gap: 1.25rem;
-  padding: 1.75rem 1.5rem 1.75rem 0;
+  padding: 1.5rem 1.5rem 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -227,7 +252,7 @@
 
 /* What this is not */
 .approach-not {
-  padding: 3.5rem 0;
+  padding: 3.25rem 0;
   background: var(--white);
 }
 
@@ -280,13 +305,13 @@
 
 /* Engagement journey */
 .approach-journey {
-  padding: 3.5rem 0;
+  padding: 3.25rem 0;
   background: var(--cream-light);
 }
 
 .approach-journey__header {
   max-width: 640px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .approach-journey__title {
@@ -309,7 +334,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .approach-journey__step {
@@ -373,22 +398,32 @@
 }
 
 @media (max-width: 1100px) {
-  .approach-hero {
-    padding: 2rem 0 2.75rem;
+  .approach-hero__shell {
+    padding-top: 1.5rem;
   }
 
   .approach-hero__grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
-  .approach-hero__media {
-    max-width: 420px;
-    margin: 0 auto;
+  .approach-hero__copy {
+    padding: 0 0 0 1.15rem;
   }
 
   .approach-hero__text {
     max-width: none;
+  }
+
+  .approach-hero__image {
+    min-height: clamp(200px, 48vw, 280px);
+    clip-path: none;
+    border-radius: 1.15rem 0 1.15rem 0;
+  }
+
+  .approach-hero__band-image {
+    height: clamp(130px, 30vw, 190px);
   }
 
   .approach-journey__steps {
@@ -398,24 +433,20 @@
 }
 
 @media (max-width: 900px) {
-  .approach-hero {
-    padding: 1.75rem 0 2.25rem;
-  }
-
   .approach-philosophy {
-    padding: 2.75rem 0;
+    padding: 2.25rem 0 2.75rem;
   }
 
   .approach-philosophy__layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 1.5rem;
+    gap: 1.35rem;
   }
 
   .approach-philosophy__quote {
     grid-column: 1;
     grid-row: auto;
-    padding: 0 0 0 1.25rem;
+    padding: 0 0 0 1.15rem;
   }
 
   .approach-philosophy__body,
@@ -444,7 +475,7 @@
   .approach-methodology,
   .approach-journey,
   .approach-not {
-    padding: 2.75rem 0;
+    padding: 2.5rem 0;
   }
 
   .approach-journey__header {
@@ -454,15 +485,20 @@
 
 @media (max-width: 600px) {
   .approach-hero__title {
-    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    font-size: clamp(1.65rem, 7.5vw, 2.1rem);
   }
 
   .approach-hero__lead {
-    font-size: clamp(0.98rem, 4vw, 1.1rem);
+    font-size: clamp(1.1rem, 4.5vw, 1.25rem);
+    max-width: none;
   }
 
   .approach-hero__text {
     font-size: 0.84rem;
+  }
+
+  .approach-hero__image {
+    min-height: 11.5rem;
   }
 
   .approach-not__item {
@@ -500,7 +536,7 @@
 
 @media (max-width: 430px) {
   .approach-hero__title {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
   }
 
   .approach-methodology__item {

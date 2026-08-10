@@ -1,7 +1,6 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SectionHeading from '../components/SectionHeading'
-import { StarBurst } from '../components/Doodles'
 import { teamChristineImg, teamElmarieImg, teamHeroImg } from '../assets/siteImages'
 import SiteImage from '../components/SiteImage'
 import './TeamPage.css'
@@ -44,8 +43,8 @@ export default function TeamPage() {
       <Header activeLink="team" ctaStyle="outline" />
 
       <section className="team-hero">
-        <div className="container team-hero__grid">
-          <div className="team-hero__copy">
+        <div className="team-hero__copy-band">
+          <div className="container team-hero__copy">
             <p className="team-hero__eyebrow">The people behind Minds &amp; Manners</p>
             <h1 className="team-hero__title">
               Meet the <em>Team</em>
@@ -54,17 +53,14 @@ export default function TeamPage() {
               Two specialists united by a belief that exceptional service, culture, and leadership begin with the human being.
             </p>
           </div>
-          <div className="team-hero__media">
-            <SiteImage
-              src={teamHeroImg}
-              alt="Minds & Manners team collaborating"
-              className="team-hero__image"
-              priority
-            />
-            <span className="team-hero__starburst" aria-hidden="true">
-              <StarBurst size={28} />
-            </span>
-          </div>
+        </div>
+        <div className="team-hero__media">
+          <SiteImage
+            src={teamHeroImg}
+            alt="Minds & Manners team collaborating"
+            className="team-hero__image"
+            priority
+          />
         </div>
       </section>
 

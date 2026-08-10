@@ -54,35 +54,37 @@ export default function ImpactPage() {
       <Header activeLink="impact" ctaStyle="outline" />
 
       <section className="impact-hero">
-        <div className="container impact-hero__grid">
-          <div className="impact-hero__copy">
-            <p className="impact-hero__eyebrow">Impact</p>
-            <h1 className="impact-hero__title">The Impact of Our Workshops</h1>
-            <div className="impact-hero__narrative">
-              <p>
-                The effects of our workshops don&apos;t stay in the room — they follow your team into every shift and every interaction. Staff leave with real confidence, a quieter sense of peace, and the kind of patience that doesn&apos;t run out when a guest is difficult or a day is long.
-              </p>
-              <p>
-                Empathy deepens. Clarity replaces confusion. And something that can be hard to manufacture begins to grow naturally — genuine team spirit, where people feel connected not just to their role, but to each other and to the purpose behind what they do.
-              </p>
-              <p className="impact-hero__closing">
-                Your team doesn&apos;t just function better. <strong>It feels better</strong> — and your guests or clients will notice.
-              </p>
+        <div className="impact-hero__shell">
+          <div className="container impact-hero__grid">
+            <div className="impact-hero__copy">
+              <p className="impact-hero__eyebrow">Impact</p>
+              <h1 className="impact-hero__title">The Impact of Our Workshops</h1>
+              <div className="impact-hero__narrative">
+                <p className="impact-hero__lead">
+                  The effects of our workshops don&apos;t stay in the room — they follow your team into every shift and every interaction. Staff leave with real confidence, a quieter sense of peace, and the kind of patience that doesn&apos;t run out when a guest is difficult or a day is long.
+                </p>
+                <p>
+                  Empathy deepens. Clarity replaces confusion. And something that can be hard to manufacture begins to grow naturally — genuine team spirit, where people feel connected not just to their role, but to each other and to the purpose behind what they do.
+                </p>
+                <p className="impact-hero__closing">
+                  Your team doesn&apos;t just function better. <strong>It feels better</strong> — and your guests or clients will notice.
+                </p>
+              </div>
+            </div>
+            <div className="impact-hero__media">
+              <SiteImage
+                src={generalGetty37}
+                alt="Team experiencing positive workshop outcomes"
+                className="impact-hero__image"
+                priority
+              />
             </div>
           </div>
-          <div className="impact-hero__media">
-            <SiteImage
-              src={generalGetty37}
-              alt="Team experiencing positive workshop outcomes"
-              className="impact-hero__image"
-              priority
-            />
-          </div>
         </div>
-      </section>
-
-      <section className="impact-pano" aria-hidden="true">
-        <img src={panoUsm} alt="" className="impact-pano__image" loading="lazy" decoding="async" />
+        <div className="impact-hero__band" aria-hidden="true">
+          <img src={panoUsm} alt="" className="impact-hero__band-image" loading="lazy" decoding="async" />
+          <span className="impact-hero__band-wash" />
+        </div>
       </section>
 
       <section className="impact-research" aria-labelledby="impact-research-title">

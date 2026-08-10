@@ -10,6 +10,13 @@ interface HeaderProps {
   ctaStyle?: 'gold' | 'outline'
 }
 
+const whoWeWorkWithLinks = [
+  { label: 'Hospitality & Tourism', to: '/hospitality' },
+  { label: 'Service Industries', to: '/service' },
+  { label: 'Schools & Youth', to: '/school-youth' },
+  { label: 'Teams & Organisations', to: '/#who-we-work-with' },
+]
+
 function NavLink({
   to,
   children,
@@ -44,12 +51,58 @@ function SectionLink({
   )
 }
 
+function WhoWeWorkWithMenu({
+  active = false,
+  onNavigate,
+}: {
+  active?: boolean
+  onNavigate?: () => void
+}) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div
+      className={`header__dropdown ${open ? 'header__dropdown--open' : ''} ${active ? 'header__dropdown--active' : ''}`}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        className="header__link header__dropdown-toggle"
+        aria-expanded={open}
+        aria-haspopup="true"
+        onClick={() => setOpen((value) => !value)}
+      >
+        <span className={active ? 'CharOverride-5' : 'CharOverride-6'}>Who We Work With</span>
+        <span className="header__dropdown-caret" aria-hidden="true" />
+      </button>
+      <div className="header__dropdown-menu" role="menu">
+        {whoWeWorkWithLinks.map((item) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            className="header__dropdown-link"
+            role="menuitem"
+            onClick={() => {
+              setOpen(false)
+              onNavigate?.()
+            }}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
   const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const isHospitality = activeLink === 'hospitality' || location.pathname === '/hospitality'
   const isService = activeLink === 'service' || location.pathname === '/service'
   const isYouth = activeLink === 'youth' || location.pathname === '/school-youth'
+  const isWhoWeWorkWith = isHospitality || isService || isYouth || location.hash === '#who-we-work-with'
   const isApproach = activeLink === 'approach' || location.pathname === '/approach'
   const isImpact = activeLink === 'impact' || location.pathname === '/impact'
   const isTeam = activeLink === 'team' || location.pathname === '/team'
@@ -98,14 +151,9 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
             <NavLink to="/" coral={isHome} onNavigate={closeMenu}>
               About Us
             </NavLink>
-            <NavLink to="/hospitality" coral={isHospitality} onNavigate={closeMenu}>
-              For Hospitality
-            </NavLink>
-            <NavLink to="/service" coral={isService} onNavigate={closeMenu}>
-              For Service Industries
-            </NavLink>
-            <NavLink to="/school-youth" coral={isYouth} onNavigate={closeMenu}>
-              For School &amp; Youths
+            <WhoWeWorkWithMenu active={isWhoWeWorkWith} onNavigate={closeMenu} />
+            <NavLink to="/approach" coral={isApproach} onNavigate={closeMenu}>
+              Our Approach
             </NavLink>
           </nav>
 
@@ -114,11 +162,11 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
           </div>
 
           <nav className="header__nav header__nav--right" aria-label="Secondary">
-            <NavLink to="/approach" coral={isApproach} onNavigate={closeMenu}>
-              Our Approach
-            </NavLink>
             <NavLink to="/impact" coral={isImpact} onNavigate={closeMenu}>
               Impact
+            </NavLink>
+            <NavLink to="/team" coral={isTeam} onNavigate={closeMenu}>
+              Team
             </NavLink>
             <div className="header__cta-anchor header__cta-anchor--desktop">
               <div className="header__actions">
@@ -133,9 +181,6 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
                 />
               </div>
             </div>
-            <NavLink to="/team" coral={isTeam} onNavigate={closeMenu}>
-              Team
-            </NavLink>
             <SectionLink to="/#contact" onNavigate={closeMenu}>
               Contact
             </SectionLink>
@@ -147,15 +192,7 @@ export default function Header({ activeLink, ctaStyle = 'gold' }: HeaderProps) {
             <NavLink to="/" coral={isHome} onNavigate={closeMenu}>
               About Us
             </NavLink>
-            <NavLink to="/hospitality" coral={isHospitality} onNavigate={closeMenu}>
-              For Hospitality
-            </NavLink>
-            <NavLink to="/service" coral={isService} onNavigate={closeMenu}>
-              For Service Industries
-            </NavLink>
-            <NavLink to="/school-youth" coral={isYouth} onNavigate={closeMenu}>
-              For School &amp; Youths
-            </NavLink>
+            <WhoWeWorkWithMenu active={isWhoWeWorkWith} onNavigate={closeMenu} />
             <NavLink to="/approach" coral={isApproach} onNavigate={closeMenu}>
               Our Approach
             </NavLink>
