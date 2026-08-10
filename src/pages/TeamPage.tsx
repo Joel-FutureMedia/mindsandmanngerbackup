@@ -43,24 +43,26 @@ export default function TeamPage() {
       <Header activeLink="team" ctaStyle="outline" />
 
       <section className="team-hero">
-        <div className="team-hero__copy-band">
-          <div className="container team-hero__copy">
-            <p className="team-hero__eyebrow">The people behind Minds &amp; Manners</p>
-            <h1 className="team-hero__title">
-              Meet the <em>Team</em>
-            </h1>
-            <p className="team-hero__intro">
-              Two specialists united by a belief that exceptional service, culture, and leadership begin with the human being.
-            </p>
+        <div className="team-hero__shell">
+          <div className="container team-hero__grid">
+            <div className="team-hero__copy">
+              <p className="team-hero__eyebrow">The people behind Minds &amp; Manners</p>
+              <h1 className="team-hero__title">
+                Meet the <em>Team</em>
+              </h1>
+              <p className="team-hero__intro">
+                Two specialists united by a belief that exceptional service, culture, and leadership begin with the human being.
+              </p>
+            </div>
+            <div className="team-hero__media">
+              <SiteImage
+                src={teamHeroImg}
+                alt="Minds & Manners team collaborating"
+                className="team-hero__image"
+                priority
+              />
+            </div>
           </div>
-        </div>
-        <div className="team-hero__media">
-          <SiteImage
-            src={teamHeroImg}
-            alt="Minds & Manners team collaborating"
-            className="team-hero__image"
-            priority
-          />
         </div>
       </section>
 
