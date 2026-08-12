@@ -412,7 +412,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
+}
+
+.hosp-gallery__item:nth-child(3) img {
+  object-position: center 16%;
 }
 
 /* —— Tablet & below: stack hero, reflow flagship —— */
