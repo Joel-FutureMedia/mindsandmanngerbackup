@@ -130,6 +130,65 @@
   min-width: 0;
 }
 
+.footer__credit-wrap {
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.footer--cream .footer__credit-wrap {
+  border-top-color: rgba(32, 80, 208, 0.15);
+}
+
+.footer__credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer__credit:hover {
+  opacity: 0.88;
+}
+
+.footer__credit-text {
+  font-family: var(--font-apparat);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--white);
+}
+
+.footer--cream .footer__credit-text {
+  color: var(--mm-blue, var(--blue));
+}
+
+.footer__credit-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.footer--cream .footer__credit-logo-wrap {
+  padding: 0.45rem 0.75rem;
+  background: #1a1a1a;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.18);
+}
+
+.footer__credit-logo {
+  height: clamp(2.75rem, 5vw, 3.5rem);
+  width: auto;
+  display: block;
+}
+
+.footer--cream .footer__credit-logo {
+  height: clamp(2.35rem, 4.5vw, 3rem);
+}
+
 @media (max-width: 900px) {
   .footer {
     padding: 3rem 0;
@@ -167,5 +226,10 @@
 
   .footer__newsletter {
     margin-top: 1.25rem;
+  }
+
+  .footer__credit-wrap {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
   }
 }
