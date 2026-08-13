@@ -71,7 +71,7 @@ export function buildDiscoveryCallEmail({ name, email, phone, company, industry,
           <tr>
             <td style="background:#fcded6;padding:16px 32px;border-top:3px solid #f36849;">
               <p style="margin:0;font-size:13px;line-height:1.5;color:#2050d0;font-weight:600;">
-                Reply directly to this email to reach ${escapeHtml(name)} at ${escapeHtml(email)}.
+                Reply directly to this email to reach Elmarie Van Rensburg at elmarie@onceuponmind.com.
               </p>
             </td>
           </tr>
@@ -93,6 +93,8 @@ export function buildDiscoveryCallEmail({ name, email, phone, company, industry,
     message ? `Message: ${message}` : null,
     '',
     `Submitted: ${submittedAt}`,
+    '',
+    'Reply directly to this email to reach Elmarie Van Rensburg at elmarie@onceuponmind.com.',
   ]
     .filter(Boolean)
     .join('\n')
