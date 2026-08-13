@@ -113,6 +113,22 @@
   margin-top: 0.25rem;
 }
 
+.discovery-modal__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.discovery-modal__error {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.5rem;
+  background: rgba(243, 104, 73, 0.12);
+  border-left: 3px solid var(--mm-coral-alt, #f36849);
+  color: #b33a24;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 .discovery-modal__submit .CharOverride-4 {
   color: var(--mm-black);
   font-size: 0.75rem !important;

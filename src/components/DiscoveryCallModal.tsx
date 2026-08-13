@@ -31,16 +31,21 @@ export function DiscoveryCallProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false)
   const [form, setForm] = useState(emptyForm)
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const dialogRef = useRef<HTMLDivElement>(null)
 
   const openDiscoveryCall = useCallback(() => {
     setSubmitted(false)
+    setSubmitError('')
     setIsOpen(true)
   }, [])
 
   const closeDiscoveryCall = useCallback(() => {
     setIsOpen(false)
     setSubmitted(false)
+    setSubmitError('')
+    setIsSubmitting(false)
     setForm(emptyForm)
   }, [])
 
@@ -74,9 +79,30 @@ export function DiscoveryCallProvider({ children }: { children: ReactNode }) {
     setForm((current) => ({ ...current, [name]: value }))
   }
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
-    setSubmitted(true)
+    setSubmitError('')
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/discovery-call', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      const data = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to send your request. Please try again.')
+      }
+
+      setSubmitted(true)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'Unable to send your request. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -209,8 +235,18 @@ export function DiscoveryCallProvider({ children }: { children: ReactNode }) {
                     />
                   </div>
 
-                  <button type="submit" className="btn-pill btn-pill--mustard discovery-modal__submit">
-                    <span className="CharOverride-4">Send request</span>
+                  {submitError ? (
+                    <p className="discovery-modal__error" role="alert">
+                      {submitError}
+                    </p>
+                  ) : null}
+
+                  <button
+                    type="submit"
+                    className="btn-pill btn-pill--mustard discovery-modal__submit"
+                    disabled={isSubmitting}
+                  >
+                    <span className="CharOverride-4">{isSubmitting ? 'Sending…' : 'Send request'}</span>
                   </button>
                 </form>
               </>

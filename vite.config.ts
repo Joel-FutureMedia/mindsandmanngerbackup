@@ -15,6 +15,11 @@ export default defineConfig({
       webp: { quality: 80 },
     }),
   ],
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3001',
+    },
+  },
   build: {
     // Keep large photos as separate files, not inlined base64.
     assetsInlineLimit: 4096,
