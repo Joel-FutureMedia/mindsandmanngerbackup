@@ -1,16 +1,15 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import SectionHeading from '../components/SectionHeading'
-import { teamChristineImg, teamElmarieImg, teamHeroImg } from '../assets/siteImages'
-import SiteImage from '../components/SiteImage'
 import './TeamPage.css'
 
 const teamMembers = [
   {
     name: 'Christine Hugo',
     email: 'christine@onceuponmind.com',
-    image: teamChristineImg,
-    imageAlt: 'Christine Hugo',
+    phone: '+264 81 7077 693',
+    phoneHref: 'tel:+264817077693',
+    initials: 'CH',
     paragraphs: [
       'An experienced Creative Thinking and Communication Specialist with over 25 years of experience. She is a highly skilled writer, accomplished business leader, and expert communications specialist. Driven by a passion for transforming individuals into their best selves, she uses storytelling to encourage individuals to take control of their lives and create their own stories.',
       "Her work has been showcased in established magazine publications, film documentaries, and books. As the founder of OnceUponMind, a creative thinking consultancy, Christine passionately promotes the concept of 'narrative authority '.",
@@ -20,8 +19,9 @@ const teamMembers = [
   {
     name: 'Elmarie van Rensburg',
     email: 'elmarie@onceuponmind.com',
-    image: teamElmarieImg,
-    imageAlt: 'Elmarie van Rensburg',
+    phone: '+264 81 277 3334',
+    phoneHref: 'tel:+264812773334',
+    initials: 'ER',
     paragraphs: [
       'With her degree & expertise in Consumer Science and years of valuable experience in the hospitality and service industry, Elmarie has gained a profound understanding of the complex and demanding nature of customer service.',
       'Elmarie is an experienced project consultant with a proven track record across various industries. With a background in project management, PR, marketing, sales, and client relations management, she brings a unique blend of versatility and a comprehensive approach to her work.',
@@ -54,13 +54,8 @@ export default function TeamPage() {
                 Two specialists united by a belief that exceptional service, culture, and leadership begin with the human being.
               </p>
             </div>
-            <div className="team-hero__media">
-              <SiteImage
-                src={teamHeroImg}
-                alt="Minds & Manners team collaborating"
-                className="team-hero__image"
-                priority
-              />
+            <div className="team-hero__media" aria-hidden="true">
+              <div className="team-hero__placeholder" />
             </div>
           </div>
         </div>
@@ -77,17 +72,17 @@ export default function TeamPage() {
               >
                 <div className="team-profile__media">
                   <div className="team-profile__glow" aria-hidden="true" />
-                  <div className="team-profile__image-wrap">
-                    <SiteImage
-                      src={member.image}
-                      alt={member.imageAlt}
-                      className="team-profile__image"
-                      loading="lazy"
-                    />
+                  <div className="team-profile__image-wrap" aria-hidden="true">
+                    <div className="team-profile__placeholder">
+                      <span>{member.initials}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="team-profile__content">
                   <h2 className="team-profile__name">{member.name}</h2>
+                  <a href={member.phoneHref} className="team-profile__phone">
+                    {member.phone}
+                  </a>
                   <a href={`mailto:${member.email}`} className="team-profile__email">
                     {member.email}
                   </a>

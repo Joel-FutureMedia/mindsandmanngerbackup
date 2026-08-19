@@ -77,8 +77,8 @@ export default function Footer({ variant = 'blue' }: FooterProps) {
 
         <div className="footer__col footer__col--contact">
           <h3 className="footer__contact-heading"><span className={isBlue ? 'CharOverride-32' : 'CharOverride-13'}>Contact us:</span></h3>
-          <p><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>+264 81 128 4657</span></p>
-          <p><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>+264 81 128 4657</span></p>
+          <p><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Elmarie: +264 81 277 3334</span></p>
+          <p><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>Christine: +264 81 7077 693</span></p>
           <p><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>mm@mindsandmanners.com</span></p>
           <p><span className={isBlue ? 'CharOverride-3' : 'CharOverride-7'}>#23 Independence Avenue</span></p>
         </div>

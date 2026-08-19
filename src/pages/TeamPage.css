@@ -82,14 +82,13 @@
   align-self: stretch;
 }
 
-.team-hero__image {
+.team-hero__placeholder {
   width: 100%;
   height: 100%;
   min-height: clamp(240px, 32vw, 340px);
-  object-fit: cover;
-  border-radius: 0;
   clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
-  display: block;
+  background:
+    linear-gradient(165deg, #c8d4ea 0%, #e7e1da 48%, #fcded6 100%);
 }
 
 .team-profiles {
@@ -150,12 +149,22 @@
   box-shadow: 0 14px 34px rgba(30, 75, 189, 0.12);
 }
 
-.team-profile__image {
+.team-profile__placeholder {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(165deg, #d5deee 0%, #efebe8 48%, #fcded6 100%);
+}
+
+.team-profile__placeholder span {
+  font-family: var(--font-apparat);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--mm-blue);
 }
 
 .team-profile__content {
@@ -181,17 +190,27 @@
   margin: 0 0 0.4rem;
 }
 
+.team-profile__phone,
 .team-profile__email {
-  display: inline-block;
+  display: block;
   font-family: var(--font-apparat);
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--mm-coral-alt);
   text-decoration: underline;
   text-underline-offset: 3px;
+  width: fit-content;
+}
+
+.team-profile__phone {
+  margin-bottom: 0.35rem;
+}
+
+.team-profile__email {
   margin-bottom: 1rem;
 }
 
+.team-profile__phone:hover,
 .team-profile__email:hover {
   opacity: 0.85;
 }
@@ -266,7 +285,7 @@
     max-width: none;
   }
 
-  .team-hero__image {
+  .team-hero__placeholder {
     min-height: clamp(200px, 48vw, 280px);
     clip-path: none;
     border-radius: 1.15rem 0 1.15rem 0;
@@ -317,7 +336,7 @@
     font-size: clamp(1.05rem, 4.2vw, 1.2rem);
   }
 
-  .team-hero__image {
+  .team-hero__placeholder {
     min-height: 11.5rem;
   }
 
