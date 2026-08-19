@@ -1,5 +1,8 @@
+import dotenv from 'dotenv'
 import nodemailer from 'nodemailer'
 import { buildDiscoveryCallEmail } from './emailTemplate.js'
+
+dotenv.config()
 
 export function getNotifyEmails() {
   return (process.env.DISCOVERY_NOTIFY_EMAILS || '')

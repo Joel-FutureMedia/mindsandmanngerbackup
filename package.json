@@ -4,11 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm:dev:vite\" \"npm:dev:server\"",
-    "dev:vite": "vite",
-    "dev:server": "node server.js",
+    "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port 4011 --strictPort",
     "start": "node server.js"
   },
   "dependencies": {
